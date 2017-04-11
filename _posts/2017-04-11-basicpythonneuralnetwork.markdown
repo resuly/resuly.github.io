@@ -13,7 +13,7 @@ tags:
 
 如何深入理解基本神经网络模型，对于使用机器学习框架的理解十分重要。本文主要参照 [Milo Spencer](https://medium.com/technology-invention-and-more/how-to-build-a-simple-neural-network-in-9-lines-of-python-code-cc8f23647ca1) 与 [Trask](http://iamtrask.github.io/2015/07/12/basic-python-network/) 的论文进行阐述，感谢两位作者的辛勤付出。
 
-以下内容，将带你一步步的从一个简单问题，从头构建一个神经网络。一旦你理解了，你可以使用的编程语言去实现它，本文使用Python作为示例。
+以下内容，将带你一步步的从一个简单问题，从头构建一个神经网络。一旦你理解了，你可以喜欢的编程语言去实现它，本文使用Python作为示例。
 
 ## 最终代码
 
@@ -86,7 +86,7 @@ print(l2)
 
 以上表格中的输入区域，每一行的三个值就是我们的一次尝试。四次分别用了不同的组合，比如第一次至挠肚子，狗狗没反应。以此类推。
 
-那么，我们怎么确定一种刺激方法，能让狗狗高兴呢？
+那么，我们怎么确定一种刺激方法，能让狗狗高兴呢？（逗狗狂魔）
 
 ![](/img/in_post/2017/04/timg.jpg)
 

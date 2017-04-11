@@ -80,15 +80,3 @@ friends: [
         href: "http://monash.v2tm.com/"
     }
 ]
-
-atom:
-  buildCommand:
-    - E:/Ruby23-x64/bin/jekyll.bat
-    - build
-    - --option
-    - --this
-  buildEnv:
-    JEKYLL_ENV: development
-  postDirs:
-    - _newsletters
-  defaultPostDir: _drafts

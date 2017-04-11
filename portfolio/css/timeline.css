@@ -254,6 +254,7 @@ header img{
 }
 .cbp_tmlabel ul li{
     padding: 0.5em 0;
+    line-height: 1.5;
 }
 .cbp_tmlabel ul li.skill{
 	overflow: auto;
@@ -264,13 +265,12 @@ header img{
 .cbp_tmlabel ul li.skill>a{
     display: block;
     float: left;
-    font-size: 1.3rem;
-    width: 40px;
+    font-size: 0.7rem;
     height: 40px;
     text-align: center;
     line-height: 40px;
     margin-right: 8px;
-    color: #a5a7aa;
+    color: #919191;
     transition: all 0.3s ease;
 }
 .cbp_tmlabel ul li a:hover{
@@ -278,7 +278,7 @@ header img{
 	border-radius: 50%;
 }
 .cbp_tmlabel ul li.skill>span:nth-child(1){
-	margin-left: -7px;
+	/*margin-left: -7px;*/
 }
 .cbp_tmlabel ul li.skill span:before{
     line-height: 40px;
@@ -308,7 +308,7 @@ header img{
 	width: 100%;
 	height: 100%;
 	font-size: 14px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	/*reset before*/
 	background: none !important;
 	text-decoration: none;
