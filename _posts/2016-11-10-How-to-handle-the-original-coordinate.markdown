@@ -24,7 +24,7 @@ Universal Transverse Mercator System:
 ![traverse_mercator.jpg](/img/in-post/2016-11-10/traverse_mercator.jpg)
 
 The idea of UTM is making a projection for the earth and then get the x,y coordinate. (Kinds of (0,0) all located in African.)
-More information, please visit this reference: 
+More information, please visit this reference:
 [http://www.ibm.com/developerworks/cn/java/j-coordconvert/](http://www.ibm.com/developerworks/cn/java/j-coordconvert/)
 
 The following reference shows the difference among GCJ-02, WGS-84, and UTM. In this article, you can also find these coordinates system information that main map companies use.
@@ -129,12 +129,10 @@ The final results on map:
 
 ![image3.jpeg](/img/in-post/2016-11-10/image3.jpeg)
 
-Thanks for reading. 
+Thanks for reading.
 
 Please inform the errors to me from what you found.
 
 resuly@foxmail.com
 
 2016-5-9
-
-

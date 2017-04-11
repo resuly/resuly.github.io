@@ -8,8 +8,6 @@ keyword: "resuly"
 url: "resuly.github.io"  # your host, for absolute URL
 baseurl: ""        # for example, '/blog' if your blog hosted on 'host/blog'
 
-
-
 # SNS settings
 RSS: false
 weibo_username:     resuly
@@ -19,8 +17,6 @@ github_username:    resuly
 #facebook_username:  xxxx
 linkedin_username:  bo-wang-91617a5a
 
-
-
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
@@ -29,13 +25,9 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-
-
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
-
-
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -45,8 +37,6 @@ markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
-
-
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
 
@@ -55,10 +45,8 @@ kramdown:
 # Share component is depend on Comment so we can NOT use share only.
 # duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
-
-
 # Analytics settings
-# Baidu Analytics 
+# Baidu Analytics
 # ba_track_id: [your track id]
 
 # Google Analytics
@@ -92,3 +80,15 @@ friends: [
         href: "http://monash.v2tm.com/"
     }
 ]
+
+atom:
+  buildCommand:
+    - E:/Ruby23-x64/bin/jekyll.bat
+    - build
+    - --option
+    - --this
+  buildEnv:
+    JEKYLL_ENV: development
+  postDirs:
+    - _newsletters
+  defaultPostDir: _drafts
