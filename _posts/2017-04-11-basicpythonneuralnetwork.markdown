@@ -13,6 +13,8 @@ tags:
 
 如何深入理解基本神经网络模型，对于使用机器学习框架的理解十分重要。本文主要参照 [Milo Spencer](https://medium.com/technology-invention-and-more/how-to-build-a-simple-neural-network-in-9-lines-of-python-code-cc8f23647ca1) 与 [Trask](http://iamtrask.github.io/2015/07/12/basic-python-network/) 的论文进行阐述，感谢两位作者的辛勤付出。
 
+以下内容，将带你一步步的从一个简单问题，从头构建一个神经网络。一旦你理解了，你可以使用的编程语言去实现它，本文使用Python作为示例。
+
 ## 最终代码
 
 {% highlight python %}
