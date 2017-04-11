@@ -1,0 +1,148 @@
+---
+layout: page
+title: "About"
+description: "Hi, this is resuly."
+header-img: "img/about-bg.jpg"
+---
+
+<!-- Language Selector -->
+<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+    <blockquote>
+        <p>Yesterday, you said tomorrow.</p>
+    </blockquote>
+
+    <p>一个热爱篮球、热爱前沿科技技术的男童。东南大学与 Monash University 双学位硕士，主修交通运输工程。</p>
+
+    <p>一些作品和项目，见<a href="/portfolio">Portfolio</a> 与 <a href="http://github.com/huxpro">Github</a>；除了做交通课题研究，Web开发外，我也是<a href="http://monash.v2tm.com"> Transport and Urban Planning Arena</a> 研究成员，<a href="#">帝国字幕组</a>创立者。
+
+    <h5>发表文章</h5>
+    <ul>
+        <li><b>Social media application for illegal parking problem</b><i> Bo WANG[1], Liang HUA[2] and Inhi KIM[3] </i> <a href="http://cota-home.org/cictp/cictp2017.html">CICTP 2017</a></li>
+    </ul>
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote><p>Yesterday, you said tomorrow.</p></blockquote>
+
+    <p>Hi, I’m Bo from Southeast University - Monash University Joint Graduate School. I have a lot of experience in ITS & Web Development. Moreover, I always like to explore something new.</p>
+
+    <p>My projects lay in my <a href="/portfolio">Portfolio</a> and <a href="http://github.com/huxpro">Github</a>. I am a member of Transport and Urban Planning Arena and the creator of Empire Translation Group. </p>
+
+    <h5>Publication</h5>
+    <ul>
+        <li><b>Social media application for illegal parking problem</b><i> Bo WANG[1], Liang HUA[2] and Inhi KIM[3] </i> <a href="http://cota-home.org/cictp/cictp2017.html">CICTP 2017</a></li>
+    </ul>
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+    <!-- This id is used for indexing my loss comments forcedly -->
+    <div class="ds-thread"
+    {% if site.duoshuo_username == "huxblog" %}
+        data-thread-id="1187623191091085319"
+    {% else %}
+    <!-- U can just use this key generated to index comments at page about -->
+        data-thread-key="{{site.duoshuo_username}}/about"
+    {% endif %}
+
+    data-title="{{page.title}}"
+    data-url="{{site.url}}/about/"></div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User hacking by Hux
+    var _user = '{{site.duoshuo_username}}';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
