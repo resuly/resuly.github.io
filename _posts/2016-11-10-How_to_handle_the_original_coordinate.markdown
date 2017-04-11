@@ -59,13 +59,15 @@ The function we want:
 
 Simplify the code to just one line(it's helpful for generating codes in Ecxel):
 
-`new UTMRef(x, y, "R", 51).toLatLng().toString();`
+```javascript
+new UTMRef(x, y, "R", 51).toLatLng().toString();
+```
 
 Change the output format in the JScoord (line 37):
 
 ![w1goAIkSALAcuiAd.png]({{site.baseurl}}/img/in-post/2016-11-10/w1goAIkSALAcuiAd.png)
 
-```
+```c
 function LatLngToString() {
   return '<tr><td>'+this.lat.toFixed(6)+'</td><td>'+this.lng.toFixed(6)+'</td></tr>';
 }
@@ -75,6 +77,64 @@ Generate all x&y for codes in Excel:
 
 ![FGpDzo56cacRuN61.png]({{site.baseurl}}/img/in-post/2016-11-10/FGpDzo56cacRuN61.png)
 
+Establish the HTML page for the coordinate table:
 
+![eTmO2UO9K4Q1e5FA.png]({{site.baseurl}}/img/in-post/2016-11-10/eTmO2UO9K4Q1e5FA.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./jscoord-1.1.1.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+document.write('<table>')
+
+// Main codes
+document.write(new UTMRef(278306,3468927, "R", 51).toLatLng().toString());
+document.write(new UTMRef(278305.774151,3469549.551763,'R', 51).toLatLng().toString());
+document.write(new UTMRef(277062.047957,3469484.170427,'R', 51).toLatLng().toString());
+....
+
+document.write('</table>')
+</script>
+</body>
+</html>
+```
+# Final result
+
+![Ys69fNALWbo1GSlP.png]({{site.baseurl}}/img/in-post/2016-11-10/Ys69fNALWbo1GSlP.png)
+
+The result is a HTML table so that you can paste it into Excel sheet directly.
+
+Let's check the first point in Google Maps (It's correct):
+
+![lyuBNKC2iKosfefl.png]({{site.baseurl}}/img/in-post/2016-11-10/lyuBNKC2iKosfefl.png)
+
+We get the coordinate of the Google version now. Also, you can transfer it into Baidu version too.
+
+The final results on map:
+
+- Population
+
+![image.jpeg]({{site.baseurl}}/img/in-post/2016-11-10/image.jpeg)
+
+- Trips
+
+![image2.jpeg]({{site.baseurl}}/img/in-post/2016-11-10/image2.jpeg)
+
+- Heat Map
+
+![image3.jpeg]({{site.baseurl}}/img/in-post/2016-11-10/image3.jpeg)
+
+Thanks for reading. 
+
+Please inform the errors to me from what you found.
+
+resuly@foxmail.com
+
+2016-5-9
 
 
