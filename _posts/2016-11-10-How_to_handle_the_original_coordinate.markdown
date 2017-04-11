@@ -9,7 +9,7 @@ catalog: true
 tags:
   - 坐标
   - Visualization
-published: false
+published: true
 ---
 
 # Problems
