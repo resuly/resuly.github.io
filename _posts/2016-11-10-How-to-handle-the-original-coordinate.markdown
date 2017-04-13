@@ -4,7 +4,7 @@ title: "How to handle the original coordinate?"
 subtitle: "Data clean for visualizaiton"
 date: 2016-11-10 16:49:00
 author: "resuly"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-map.jpg"
 catalog: true
 tags:
   - 坐标

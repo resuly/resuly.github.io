@@ -33,7 +33,7 @@ header-img: "img/about-bg.jpg"
 <div class="en post-container">
     <blockquote><p>Yesterday, you said tomorrow.</p></blockquote>
 
-    <p>Hi, I’m Bo from Southeast University - Monash University Joint Graduate School. I have a lot of experience in ITS & Web Development. Moreover, I always like to explore something new.</p>
+    <p>Hi, I’m Bo from Southeast University - Monash University Joint Graduate School. I am a student major in Transportaion System who interested in ITS, Web Development and Deep Learing. I have a lot of experience in ITS & Web Development. Moreover, I always like to explore something new.</p>
 
     <p>My projects lay in my <a href="/portfolio">Portfolio</a> and <a href="http://github.com/huxpro">Github</a>. I am a member of Transport and Urban Planning Arena and the creator of Empire Translation Group. </p>
 
@@ -82,44 +82,6 @@ header-img: "img/about-bg.jpg"
     // init
     _render();
 </script>
-
-
-
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-<div class="comment">
-    <!-- This id is used for indexing my loss comments forcedly -->
-    <div class="ds-thread"
-    {% if site.duoshuo_username == "huxblog" %}
-        data-thread-id="1187623191091085319"
-    {% else %}
-    <!-- U can just use this key generated to index comments at page about -->
-        data-thread-key="{{site.duoshuo_username}}/about"
-    {% endif %}
-
-    data-title="{{page.title}}"
-    data-url="{{site.url}}/about/"></div>
-</div>
-<!-- 多说评论框 end -->
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = '{{site.duoshuo_username}}';
-
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
 
 
 {% if site.disqus_username %}

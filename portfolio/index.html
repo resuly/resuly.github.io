@@ -20,42 +20,287 @@ layout: default
 			<header>
 				<img width="175" height="175" style="border-radius:50%;" src="/img/avatar-resuly.jpg">
 				<h1>resuly</h1>
-				<p>A student major in Transportaion<br>
-					interested in ITS, Web Development and Deep Learing.</p>
+
+				<!-- Language Selector -->
+				<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+				    <option value="0" selected> 中文 Chinese </option>
+				    <option value="1"> 英文 English </option>
+				</select>
+
 			</header>
-			<div class="main">
+
+			<div class="zh main">
+		    <ul class="cbp_tmtimeline">
+
+					  <li>
+							<div class="cbp_tmlabel">
+									<h2>共享单车导航（进行中）</h2>
+									<time>2017.04</time>
+									<img src="images/work-bike.jpg">
+									<ul>
+											<li>
+													共享单车是近期国内的热门话题。各种单车厂商五花八门，往往需要安装多个App才能很好的使用单车。
+													本项目致力于将城市共享单车的资源整合到一起，争取利用深度学习技术对共享单车做出交通预测，相成一个包括自行车在内的路线导航系统。
+													本项目仍在开发与构思中。
+											</li>
+											<li class="skill">
+													<span>PHP</span>
+													<span>Leafletjs</span>
+													<span class="link">
+													  	<a target="_blank" href="/2017/04/08/sharingbike/">查看</a>
+													</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+		        <li>
+		            <div class="cbp_tmlabel">
+		                <h2>轨道交通线上购票系统</h2>
+		                <time>2017.03</time>
+		                <img src="images/work-afc.jpg">
+		                <ul>
+		                    <li>
+		                        硕士毕业设计项目，为解决AFC系统与移动支付对接问题而设计。 实现不同城市地铁系统的微信支付购票，线路、车站、订单管理等功能。详见公众号轨道交通精灵。
+		                    </li>
+		                    <li class="skill">
+		                        <span>PHP</span>
+		                        <span>MySql</span>
+		                        <span>WeChat</span>
+		                        <span class="link">
+																			<a target="_blank" href="/portfolio/images/qrcode-afc.jpg">查看</a>
+																	</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>微信停车助手</h2>
+		                <time>2016.09</time>
+		                <img src="images/work-parking.jpg">
+		                <ul>
+		                    <li>
+		                        违规停车是城市交通拥堵的重要原因之一，其主要功能为利用社交媒体让群众主动举报违规停车现象。 与Inhi Kim教授进行最初的方案讨论，并完成所有的开发工作与宣传展示等工作。 后与姑苏区交警大队形成合作关系，该项目纳入其2017年的财政预算项目之一。
+		                        我完成了所有的开发工作（前后端），并制作了一个宣传视频，详情请点击下面的查看按钮。
+		                    </li>
+		                    <li class="skill">
+		                        <span>PHP</span>
+		                        <span>MySql</span>
+		                        <span>WeChat</span>
+		                        <span>Photoshop</span>
+		                        <span>Premiere</span>
+		                        <span>Audition</span>
+		                        <span class="link">
+												<a target="_blank" href="http://monash.v2tm.com/archives/212">查看</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>道路养护系统开发</h2>
+		                <time>2016.07</time>
+		                <img src="images/work-highway.jpg">
+		                <ul>
+		                    <li>
+													与导师的合作项目。主要负责施工车辆实时定位、轨迹回放、微信客户端等功能开发。
+													方便道路养护作业集中管理，协助现场施工人员记录施工过程、创建施工项目等。
+													该系统初步为江苏省某养护公司提供了更加方面使用的养护项目管理功能。
+		                    </li>
+		                    <li class="skill">
+		                        <span>PHP</span>
+		                        <span>MySql</span>
+		                        <span>WeChat SDK</span>
+		                        <span>Javascript</span>
+		                        <span class="link">
+												<a target="_blank" href="#">暂无链接</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<!-- 苏州市数据可视化 -->
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>苏州市数据可视化</h2>
+		                <time>2015.12</time>
+		                <img src="images/work-visualization.jpg">
+		                <ul>
+		                    <li>
+													数据可视化的对象为交通量与人口。
+													主要负责Vissim原始数据处理、坐标转换、地图生成等工作，涉及R, Javascript等开发语言。
+													从该项目中学习到了各个地理坐标系统相关处理、数据可视化、文档撰写等问题。
+		                    </li>
+		                    <li class="skill">
+		                        <span>R</span>
+		                        <span>Javascript</span>
+		                        <span class="link">
+												<a target="_blank" href="/2016/11/11/How-to-handle-the-original-coordinate/">查看</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<!-- ITS研究中心网站 -->
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>ITS研究中心网站</h2>
+		                <time>2017.01</time>
+		                <img src="images/work-itscenter.jpg">
+		                <ul>
+		                    <li>
+													负责旧版网站的整体重构、风格设计。
+													以Uikit前端框架为基础，开发相应的Wordpress主题匹配网站数据。
+		                    </li>
+		                    <li class="skill">
+		                        <span>Wordpress</span>
+		                        <span>Uikit</span>
+		                        <span class="link">
+												<a target="_blank" href="http://itscenter.seu.edu.cn/">查看</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+					  <!-- 汇商网 -->
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>汇商网</h2>
+		                <time>2015.12</time>
+		                <img src="images/work-forexpress.jpg">
+		                <ul>
+		                    <li>
+													一家外汇资讯网站的重构工作，主要负责页面设计外的所有开发工作。
+													实现了新老站点的无缝升级，同时也为PV的提高产生了明显的帮助作用。
+		                    </li>
+		                    <li class="skill">
+		                        <span>Wordpress</span>
+		                        <span>PHP</span>
+		                        <span>Photoshop</span>
+		                        <span class="link">
+												<a target="_blank" href="http://forexpress.hk/">查看</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<!-- 微信の店 -->
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>微信の店</h2>
+		                <time>2015.12</time>
+		                <img src="images/work-wechatshop.jpg">
+		                <ul>
+		                    <li>
+													O2O流行时期的个人开发项目，基于Thinkphp实现了微信商城的相关各种功能。
+													难点在于微信内的支付宝模块实现、订单打印、商品管理、会员信息管理等模块的开发。
+													该系统先后运用于水果店、鲜花店、零食店等。
+		                    </li>
+		                    <li class="skill">
+		                        <span>PHP</span>
+		                        <span>Shopping System</span>
+		                        <span>Payment</span>
+		                        <span class="link">
+												<a target="_blank" href="http://wechat.v2tm.com/">查看</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+						<!-- 帝国字幕组 -->
+						<li>
+		            <div class="cbp_tmlabel">
+		                <h2>帝国字幕组</h2>
+		                <time>2015.06</time>
+		                <img src="images/work-group.jpg">
+		                <ul>
+		                    <li>
+													与好友一起组成的视频翻译团队,译制多部篮球相关短片。主要负责网站维护，字幕翻译、字幕制作、压制等。
+													为方便协同工作，相应开发了一个字幕协同翻译的小工具(PHP+Mysql+有道翻译接口) 。
+													该项目某视频翻译作品在虎扑论坛热帖区被转载，连续三天热度排名第一。
+		                    </li>
+		                    <li class="skill">
+		                        <span>PHP</span>
+		                        <span>Mysql</span>
+		                        <span>Aegisub</span>
+		                        <span class="link">
+												<a target="_blank" href="#">暂无链接</a>
+											</span>
+		                    </li>
+		                </ul>
+		            </div>
+		        </li>
+
+		    </ul>
+		  </div>
+
+			<div class="en main">
 				<ul class="cbp_tmtimeline">
 					<li>
 						<div class="cbp_tmlabel">
-							<h2 id="boxoffice">轨道交通线上购票系统</h2>
+								<h2>Navigation of Sharing Bike (On going)</h2>
+								<time>2017.04</time>
+								<img src="images/work-bike.jpg">
+								<ul>
+										<li>
+											  The sharing bike is hot in China now. People always need to install many Apps to use different bike services.
+												This project focuses on sharing bike navigation problem. In the first phase, most of online bike resources will be collected together for data analysis.
+												Sencond phase will make a predict of bicyle distribution by deep learning.
+												Finally, the sharing bike will be combined with traditional navigation, I believe it will be very useful for solving the last mile problem.
+										</li>
+										<li class="skill">
+												<span>PHP</span>
+												<span>Leafletjs</span>
+												<span class="link">
+														<a target="_blank" href="/2017/04/08/sharingbike/">View</a>
+												</span>
+										</li>
+								</ul>
+						</div>
+				  </li>
+
+					<li>
+						<div class="cbp_tmlabel">
+							<h2>Online AFC ticket System</h2>
 							<time>2017.03</time>
 							<img src="images/work-afc.jpg">
 							<ul>
 								<li>
-									硕士毕业设计项目，为解决AFC系统与移动支付对接问题而设计。 实现不同城市地铁系统的微信支付购票，线路、车站、订单管理等功能。详见公众号轨道交通精灵。
+									This is my graduation project for online metro ticket. It supports multiple city, WeChat Pay, ticket management, etc.
+									Please check out the pulic WeChat account named 'SmartTransit.
 								</li>
 								<li class="skill">
 									<span>PHP</span>
 									<span>MySql</span>
 									<span>WeChat</span>
 									<span class="link">
-										<a target="_blank" href="/portfolio/images/qrcode-afc.jpg">查看</a>
+										<a target="_blank" href="/portfolio/images/qrcode-afc.jpg">View</a>
 									</span>
 								</li>
 							</ul>
 						</div>
 					</li>
+
 					<li>
 						<div class="cbp_tmlabel">
-							<h2 id="boxoffice">微信停车助手</h2>
+							<h2>Parking Helper in WeChat</h2>
 							<time>2016.09</time>
 							<img src="images/work-parking.jpg">
 							<ul>
 								<li>
-									违规停车是城市交通拥堵的重要原因之一，其主要功能为利用社交媒体让群众主动举报违规停车现象。
-									与Inhi Kim教授进行最初的方案讨论，并完成所有的开发工作与宣传展示等工作。
-									后与姑苏区交警大队形成合作关系，该项目纳入其2017年的财政预算项目之一。
-									<a href="http://monash.v2tm.com/archives/212">详细介绍(含视频)</a>
+									The illegal parking is a main reason for the traffic jam.
+									This app uses social media to collect illegal parking information from the public.
+									I finished all development works and an advertised video.
+									Furthermore, this project became a financial budget of Suzhou Traffic Police Department in 2017.
 								</li>
 								<li class="skill">
 									<span>PHP</span>
@@ -65,16 +310,196 @@ layout: default
 									<span>Premiere</span>
 									<span>Audition</span>
 									<span class="link">
-										<a target="_blank" href="#">查看</a>
+										<a target="_blank" href="http://monash.v2tm.com/archives/212">View</a>
 									</span>
 								</li>
 							</ul>
 						</div>
 					</li>
 
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>Road Maintenance System</h2>
+									<time>2016.07</time>
+									<img src="images/work-highway.jpg">
+									<ul>
+											<li>
+												This is a project from my supervisor in SEU. It a big system for the construction sites.
+												I wrote the functions for car locating, working track replay, and a WeChat Client.
+												It helps people who work on road maintenance and adopted by a company in Jiangsu.
+											</li>
+											<li class="skill">
+													<span>PHP</span>
+													<span>MySql</span>
+													<span>WeChat SDK</span>
+													<span>Javascript</span>
+													<span class="link">
+											<a target="_blank" href="#">No link</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+					<!-- 苏州市数据可视化 -->
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>Data Visualization of Suzhou</h2>
+									<time>2015.12</time>
+									<img src="images/work-visualization.jpg">
+									<ul>
+											<li>
+												This is also a data clean work if for Vissim project.
+												It involved with coordinates conversion, mapping, R, and Javascript.
+												I learned a lot from geographic information and data visualization.</li>
+											<li class="skill">
+													<span>R</span>
+													<span>Javascript</span>
+													<span class="link">
+											<a target="_blank" href="/2016/11/11/How-to-handle-the-original-coordinate/">View</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+					<!-- ITS研究中心网站 -->
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>Website of ITS Research Center in SEU</h2>
+									<time>2017.01</time>
+									<img src="images/work-itscenter.jpg">
+									<ul>
+											<li>
+												Redesign the old website with Uikit & Wordpress.
+											</li>
+											<li class="skill">
+													<span>Wordpress</span>
+													<span>Uikit</span>
+													<span class="link">
+											<a target="_blank" href="http://itscenter.seu.edu.cn/">View</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+					<!-- 汇商网 -->
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>Forexpress.hk</h2>
+									<time>2015.12</time>
+									<img src="images/work-forexpress.jpg">
+									<ul>
+											<li>
+												This is a financial news platform.
+												I wrote codes for both backend and frontend.
+												New UI and smooth data transfer attract more users.
+											</li>
+											<li class="skill">
+													<span>Wordpress</span>
+													<span>PHP</span>
+													<span>Photoshop</span>
+													<span class="link">
+											<a target="_blank" href="http://forexpress.hk/">View</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+					<!-- 微信の店 -->
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>WeChat Shopping Mall</h2>
+									<time>2015.12</time>
+									<img src="images/work-wechatshop.jpg">
+									<ul>
+											<li>
+												This is a personal project for people who want have a shop in WeChat.
+												It supports mobile payment, orders printing, products management, user center etc.
+												It used by some real shops for online business.
+											</li>
+											<li class="skill">
+													<span>PHP</span>
+													<span>Shopping System</span>
+													<span>Payment</span>
+													<span class="link">
+											<a target="_blank" href="http://wechat.v2tm.com/">View</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
+					<!-- 帝国字幕组 -->
+					<li>
+							<div class="cbp_tmlabel">
+									<h2>Empire Subtitle Groups</h2>
+									<time>2015.06</time>
+									<img src="images/work-group.jpg">
+									<ul>
+											<li>
+												Establish and organize a video subtitle group with friends.
+												Responsible for website maintaining, video translation, and subtitle making.
+												Also develop a coordinating subtitle translation tool (PHP + Mysql + Youdao API) for cooperative work.
+												Our works were very hot on Hupu BBS.
+											</li>
+											<li class="skill">
+													<span>PHP</span>
+													<span>Mysql</span>
+													<span>Aegisub</span>
+													<span class="link">
+											<a target="_blank" href="#">No Link</a>
+										</span>
+											</li>
+									</ul>
+							</div>
+					</li>
+
 				</ul>
 			</div>
 		</div>
+
+		<!-- Handle Language Change -->
+		<script type="text/javascript">
+		    // get nodes
+		    var $zh = document.querySelector(".zh");
+		    var $en = document.querySelector(".en");
+		    var $select = document.querySelector("select");
+
+		    // bind hashchange event
+		    window.addEventListener('hashchange', _render);
+
+		    // handle render
+		    function _render(){
+		        var _hash = window.location.hash;
+		        // en
+		        if(_hash == "#en"){
+		            $select.selectedIndex = 1;
+		            $en.style.display = "block";
+		            $zh.style.display = "none";
+		        // zh by default
+		        }else{
+		            // not trigger onChange, otherwise cause a loop call.
+		            $select.selectedIndex = 0;
+		            $zh.style.display = "block";
+		            $en.style.display = "none";
+		        }
+		    }
+
+		    // handle select change
+		    function onLanChange(index){
+		        if(index == 0){
+		            window.location.hash = "#zh"
+		        }else{
+		            window.location.hash = "#en"
+		        }
+		    }
+
+		    // init
+		    _render();
+		</script>
 	</body>
 
 </html>
