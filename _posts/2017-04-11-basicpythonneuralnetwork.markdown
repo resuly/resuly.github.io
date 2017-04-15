@@ -3,7 +3,7 @@ layout: post
 title: "10几行代码构建神经网络模型"
 date: "2017-04-11 20:35:43 +0800"
 author: "resuly"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-network.jpg"
 catalog: true
 tags:
   - 神经网络
