@@ -59,10 +59,10 @@ body, html {
 
 /* The date/time */
 .cbp_tmlabel time {
-	font-size: 1.0em;
+	font-size: 0.8em;
 	position: absolute;
 	top: 0px;
-	line-height: 64px;
+	line-height: 68px;
 	right: 5px;
 	margin-right: 1em;
 	color: #a5a7aa;
@@ -93,6 +93,15 @@ body, html {
 	margin: 0;
 	height: 64px;
 	line-height: 36px;
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px){
+	.cbp_tmtimeline > li .cbp_tmlabel h2{
+		height: inherit;
+		padding: 23px 70px 14px 20px;
+		line-height: 20px;
+	}
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
