@@ -13,15 +13,15 @@ tags:
 
 ## Background
 
-Sharing bikes are hot topic in China now. There are many different kind of sharing bikes. In Nanjing (A city in China), more then 5 companies compete together in this area. Most of these bikes are dockless, which means you can return it at any place you want. I need to install several Apps to find a suitable bike nearby. It not convinient for me.
+Sharing bike is a hot topic in China now. There are many different kind of sharing bikes. In Nanjing (A city in China), more then 5 companies compete together in this area. Most of these bikes are dockless, which means you can rent or return it at any place you want. As a result, I need to install several Apps to find a suitable bike nearby. It not convinient for me.
 
 ![Different color stand for different operator](/img/in_post/2017/04/bikes.jpg)
 
-We already have the map navigation for public trasportation with bus, metro, and walking. However, the sharing bike system is not participated in. I list two main challenges below for integrating sharing bikes into traditional navigation system.
-- Hard to make a positional prediction for dockless bikes (people may return it anywhere)
+We already have the map navigation for public trasportation with bus, metro, and walking. However, the sharing bike system is not participated in. There are two main challenges for integrating sharing bikes into a traditional navigation system. I list them below.
+- Make the positional prediction for dockless bikes (people may return it anywhere)
 - Too many different bike operators. It hard to make all information together.
 
-I want to make a application to achieve a complete transit navigation. The core step is using deep learning to predit bike postion in the future based on amounts of data. This can be separated by 3 steps:
+I want to make a application to achieve a complete transit navigation. The core step is using deep learning to predit bike postion in a short term based on a deep neural network. This can be separated by 3 steps:
 - Collect majority of sharing bikes positions in time
 - Build a properly neural network and train it
 - Predict the bike postion in sepcific area and time
@@ -33,11 +33,11 @@ Remark: This project is only a conception now
 
 ## Data Collection
 
-After finding the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. I used [Leaflet.js](http://leafletjs.com/) to show these bike information on map. When you open the webpage, it will request your position and return all available bikes nearby. This can be a bike finder or data collector now.
+After finding the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show these bike information on map. When you open the webpage, it will request your position and return all available bikes nearby. This can be a bike finder or data collector now.
 
 [![](/img/in_post/2017/04/3bikes.jpg)](/img/in_post/2017/04/3bikes.jpg)
 
-The bikes from Yongan are not dockless, you have to borrow or return it from fixed parking stations on the street. So the postion of these static bikes are fixed, and you can check the number of available bikes from these stations. Mobike and ofo have no fixed postion for parking, so what you get are GPS coodrdinates from their bikes.
+The bikes from Yongan are not dockless, so you have to borrow or return it from fixed parking stations on the street. The postion of these static bikes are fixed, and you can check the number of available bikes from these stations. Mobike and ofo have no fixed postion for parking, so what you get are GPS coodrdinates from their bikes.
 
 Example of the data：
 
@@ -117,8 +117,8 @@ Position simulation in Nanjing
 
 ## Tips for data collection
 
-- Because of the network condition, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the map layer with Leaflet. They are all based on pictures, so the map may be not very clear on some high resolution screens. I'm going to try the library from Amap or Google Maps to show it again.
-- If you want to require the position or camera from the user through HTML5, you have to use the https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a ssl certification and its deployment on the server.
+- For a better network connection in China, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the basic map layer with Leaflet. They are all top on pictures, so the map may be not very clear on some high resolution screens. I'm going to try the library by Amap or Google Maps to show it again.
+- If you want to require the position or camera from the user through HTML5, you need a https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a ssl certification and its deployment on the server.
 - You have to take a token to access the data from ofo, and the token is generated after you login the system.
 - There are a lot of Chinese characters in Yongan's data. If you use PHP to clean the data, the function below may helps.
 {% highlight php %}
