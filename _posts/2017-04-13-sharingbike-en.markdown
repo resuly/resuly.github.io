@@ -118,7 +118,7 @@ Position simulation in Nanjing
 ## Tips for data collection
 
 - Because of the network condition, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the map layer with Leaflet. They are all based on pictures, so the map may be not very clear on some high resolution screens. I'm going to try the library from Amap or Google Maps to show it again.
-- If you want to require the position or camera from the user, you have to use the https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a ssl certification and its deployment on the server.
+- If you want to require the position or camera from the user through HTML5, you have to use the https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a ssl certification and its deployment on the server.
 - You have to take a token to access the data from ofo, and the token is generated after you login the system.
 - There are a lot of Chinese characters in Yongan's data. If you use PHP to clean the data, the function below may helps.
 {% highlight php %}
