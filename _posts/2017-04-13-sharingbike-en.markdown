@@ -35,6 +35,8 @@ Remark: This project is only a conception now
 
 After finding the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. I used [Leaflet.js](http://leafletjs.com/) to show these bike information on map. When you open the webpage, it will request your position and return all available bikes nearby. This can be a bike finder or data collector now.
 
+[![](/img/in_post/2017/04/3bikes.jpg)](/img/in_post/2017/04/3bikes.jpg)
+
 The bikes from Yongan are not dockless, you have to borrow or return it from fixed parking stations on the street. So the postion of these static bikes are fixed, and you can check the number of available bikes from these stations. Mobike and ofo have no fixed postion for parking, so what you get are GPS coodrdinates from their bikes.
 
 Example of the data：
