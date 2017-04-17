@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The application of sharing bike navigation"
+title: "The application of bike-sharing navigation"
 date: "2017-04-08 16:05:05 +0800"
 author: "resuly"
 header-img: "img/post-bg-bike.jpg"
@@ -8,21 +8,21 @@ catalog: true
 tags:
   - Deep Learning
   - Tensorflow
-  - Sharing Bike
+  - Bike-sharing
 ---
 
 ## Background
 
-Sharing bike is a hot topic in China now. There are many different kind of sharing bikes. In Nanjing (A city in China), more then 5 companies compete together in this area. Most of these bikes are dockless, which means you can rent or return it at any place you want. As a result, I need to install several Apps to find a suitable bike nearby. It not convinient for me.
+Shared bike is a hot topic in China now. There are many different kind of shared bikes. In Nanjing (A city in China), more then 5 companies compete together in this area. Most of these bikes are dockless, which means you can rent or return it at any place you want. As a result, I need to install several Apps to find a suitable bike nearby. It not convinient for me.
 
 ![Different color stand for different operator](/img/in_post/2017/04/bikes.jpg)
 
-We already have the map navigation for public trasportation with bus, metro, and walking. However, the sharing bike system is not participated in. There are two main challenges for integrating sharing bikes into a traditional navigation system. I list them below.
+We already have the map navigation for public trasportation with bus, metro, and walking. However, the bike-sharing system is not participated in. There are two main challenges for integrating shared bikes into a traditional navigation system. I list them below.
 - Make the positional prediction for dockless bikes (people may return it anywhere)
 - Too many different bike operators. It hard to make all information together.
 
 I want to make a application to achieve a complete transit navigation. The core step is using deep learning to predit bike postion in a short term based on a deep neural network. This can be separated by 3 steps:
-- Collect majority of sharing bikes positions in time
+- Collect majority of shared bikes positions in time
 - Build a properly neural network and train it
 - Predict the bike postion in sepcific area and time
 
@@ -140,7 +140,7 @@ public function ext_json_decode($str, $mode=false){
 
 The next step is making the data collection better and using deep learning to predict bike postions.
 
-It kinda of stochastic behavior for a person to return a sharing bike. I think it needs a deep neural network to reveal the relation of bike postion in the future and the historical user behaviors.
+It kinda of stochastic behavior for a person to return a shared bike. I think it needs a deep neural network to reveal the relation of bike postion in the future and the historical user behaviors.
 
 Tensorflow is great tool for deep learning project. I am looking forward to build a suitable neural network with Tensorflow and  predict the postions with high accuracy.
 

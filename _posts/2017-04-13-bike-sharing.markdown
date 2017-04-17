@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "畅想公共自行车导航"
-subtitle: "The outline of sharing bike navigation"
+subtitle: "The outline of bike-sharing navigation"
 date: "2017-04-08 16:05:05 +0800"
 author: "resuly"
 header-img: "img/post-bg-bike.jpg"
