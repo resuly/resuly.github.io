@@ -21,7 +21,7 @@ We already have the map navigation for public trasportation with bus, metro, and
 - Make the positional prediction for dockless bikes (people may return it anywhere)
 - Too many different bike operators. It hard to make all information together.
 
-I want to make a application to achieve a complete transit navigation. The core step is using deep learning to predit bike postion in a short term based on a deep neural network. This can be separated by 3 steps:
+I want to make a application to achieve a complete transit navigation. The core step is using deep learning to predit short-term bike postion in a deep neural network. This can be separated by 3 steps:
 - Collect majority of shared bikes positions in time
 - Build a properly neural network and train it
 - Predict the bike postion in sepcific area and time
@@ -138,10 +138,10 @@ public function ext_json_decode($str, $mode=false){
 
 ## Next Step
 
-The next step is making the data collection better and using deep learning to predict bike postions.
+The next step is making the data collection better and using deep learning to predict the bike postions.
 
-It kinda of stochastic behavior for a person to return a shared bike. I think it needs a deep neural network to reveal the relation of bike postion in the future and the historical user behaviors.
+It's kinda of stochastic for a bike returning action. I think it needs a deep neural network to reveal the relation of bike postion in the future and the historical user behaviors.
 
-Tensorflow is great tool for deep learning project. I am looking forward to build a suitable neural network with Tensorflow and  predict the postions with high accuracy.
+Tensorflow is great tool for deep learning project. I am looking forward to build a suitable neural network with Tensorflow and predict the postions with high accuracy.
 
 To be continued...
