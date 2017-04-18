@@ -13,7 +13,7 @@ tags:
 
 ## Background
 
-Shared bike is a hot potato in China now. The number of shared bike users has been rapidly growing since Wei Dai (the founders and CEO of the ofo) launched the first dockless shared bike program in Beijing. The ofo ‘s market value is $**** (Citation). With its popularity, many different kinds (in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accommodate bike users. Since recently introduced shared bikes are dockless, users can rent and return them at any place and any time they want. This new concept of transportation has brought a great degree of accessibility in particularly public transportation. Although this new system has changed travel behavior in good ways there is one thing I want to improve left. Since many companies release bikes and their own apps , users need to install several Apps if they want to have the nearest bike to them. It is not simply convenient.
+Shared bike is a hot potato in China now. The number of shared bike users has been rapidly growing since Wei Dai (the founders and CEO of the Ofo) launched the first dockless shared bike program in Beijing. The Ofo's market value is more than $2 billion now ([CNBC](http://www.cnbc.com/2017/04/17/ofo-chinese-bike-sharing-start-up-says-its-now-worth-more-than-2-billion.html)). With its popularity, many different kinds (in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accommodate bike users. Since recently introduced shared bikes are dockless, users can rent and return them at any place and any time they want. This new concept of transportation has brought a great degree of accessibility in particularly public transportation. Although this new system has changed travel behavior in good ways there is one thing I want to improve left. Since many companies release bikes and their own apps , users need to install several Apps if they want to have the nearest bike to them. It is not simply convenient.
 
 ![Different color stand for different operator](/img/in_post/2017/04/bikes.jpg)
 
@@ -37,11 +37,11 @@ Remark: This project is only a conception now
 
 ## Data Collection
 
-Utilizing the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Opening the webpage, it will request your position and return information of all available bikes nearby. This can be a bike finder or a data collector now.
+Utilizing the position APIs of Yongan, Ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Opening the webpage, it will request your position and return information of all available bikes nearby. This can be a bike finder or a data collector now.
 
 [![](/img/in_post/2017/04/3bikes.jpg)](/img/in_post/2017/04/3bikes.jpg)
 
-The bikes from Yongan are not dockless, so you have to borrow or return it from fixed parking stations on the street. The position of these static bikes are fixed and you can check the number of available bikes from these stations. Mobike and ofo have no fixed position for parking so what you get is GPS coordinates from their bikes.
+The bikes from Yongan are not dockless, so you have to borrow or return it from fixed parking stations on the street. The position of these static bikes are fixed and you can check the number of available bikes from these stations. Mobike and Ofo have no fixed position for parking so what you get is GPS coordinates from their bikes.
 
 Example of the data：
 
@@ -65,7 +65,7 @@ Example of the data：
 {% endhighlight %}
 
 {% highlight javascript %}
-# ofo
+# Ofo
 "geometry": {
   "coordinates": [
     120.748678,
@@ -75,7 +75,7 @@ Example of the data：
 },
 "type": "Feature",
 "properties": {
-  "type": "ofo",
+  "type": "Ofo",
   "name": "BAO1w",
   "ordernum": "qK0wGn",
   "userIdLast": "5"
@@ -123,7 +123,7 @@ Position simulation in Nanjing
 
 - For a better network connection in China, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the basic map layer with Leaflet. They are all top on pictures, so the map may not be very clear on some high resolution screens. I'm going to use the library developed by Amap or Google Maps to show it better.
 - If you want to require the position from the user through HTML5, you need a https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a SSL certification and its deployment on the server.
-- You have to take a token to access the data from ofo and the token is generated after you login the system.
+- You have to take a token to access the data from Ofo and the token is generated after you login the system.
 - There are a lot of Chinese characters in Yongan's data. If you use PHP to clean the data, the function below may helps.
 {% highlight php %}
 public function ext_json_decode($str, $mode=false){  
@@ -142,10 +142,14 @@ public function ext_json_decode($str, $mode=false){
 
 ## Next Step
 
-The next step is to make the data collection better and to use deep learning to predict the bike positions(********).
+The next step is to make the data collection better and to use deep learning to predict the bike positions. With the prediction, we can solve problems as follows.
+- Make a better management when some area tends to be an unbalanced number of bikes.
+- Generate a custom bike recommendation in advance for users (with navigation).
 
 A bike return is stochastic. Therefore, I think it needs a deep neural network to reveal the correlation between bike position in the future and the historical user behaviors.
 
-Tensorflow is a great tool for this project. I am looking forward to building a suitable neural network with Tensorflow and predicting the positions(********) with high accuracy.
+Tensorflow is a great tool for this project. I am looking forward to building a suitable neural network with Tensorflow and predicting the positions with a high accuracy.
+
+To be continued…
 
 To be continued...
