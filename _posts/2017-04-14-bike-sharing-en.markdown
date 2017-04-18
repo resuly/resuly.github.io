@@ -3,7 +3,7 @@ layout: post
 title: "The application of bike-sharing navigation"
 date: "2017-04-14 16:05:05 +0800"
 author: "resuly"
-header-img: "img/post-bg-bike.jpg"
+header-img: "img/post-bg-bike2.jpg"
 catalog: true
 tags:
   - Deep Learning
