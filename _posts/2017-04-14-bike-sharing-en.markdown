@@ -13,18 +13,22 @@ tags:
 
 ## Background
 
-Shared bike is a hot topic in China now. The number of shared bike users have been rapidly growing since Wei Dai (the founders and CEO of the ofo) launched the first dockless shared bike program in Beijing. With its popularity, many different kinds(in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accomodate bike users. Since most bikes are dockless, users can rent and return it at any place they want. As a result, the users need to install several Apps developed by many companies to find a bike located neeaerby them. It not convinient for them.
+Shared bike is a hot potato in China now. The number of shared bike users has been rapidly growing since Wei Dai (the founders and CEO of the ofo) launched the first dockless shared bike program in Beijing. The ofo ‘s market value is $**** (Citation). With its popularity, many different kinds (in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accommodate bike users. Since recently introduced shared bikes are dockless, users can rent and return them at any place and any time they want. This new concept of transportation has brought a great degree of accessibility in particularly public transportation. Although this new system has changed travel behavior in good ways there is one thing I want to improve left. Since many companies release bikes and their own apps , users need to install several Apps if they want to have the nearest bike to them. It is not simply convenient.
 
 ![Different color stand for different operator](/img/in_post/2017/04/bikes.jpg)
 
-We already have a navigation map which navigates for public trasportation with bus, metro, and walking. However, the bike-sharing system is not participated in. There are two main challenges in integrating shared bikes into a traditional navigation system. I list them as below.
+Once all bikes are integrated in one platform, I ultimately want to develop a so called “Complete active transport system”. The idea is that I estimate the number of subway passengers going in and out the station by using smart card data. Based on the number, the adequate number of bikes is induced to be parked by operators or users. So that the subway passengers can use them without spending too much time to find them. In addition, not too many bikes would be blocking the pedestrian space which causes a lot of problem in some particular time and space.
+
+There are 2 stages to achieve this project.
+
+Firstly, we already have a navigation map which  helps people to use public transportation with bus, metro, and walking. However, the bike-sharing system is not participated in. There are two main challenges in integrating shared bikes into a traditional navigation system as follows;
 - Too many different bike operators. It is hard to integrate all information together.
 - Making the positional prediction for dockless bikes (people may return it anywhere)
 
-I want to make an application to achieve a complete transit navigation. The core step is to use a deep learning technique to predit a short-term bike postion. This can be separated by 3 steps:
+Secondly, I want to make an application to achieve complete transit navigation. The core step is to use a deep learning technique to predict a short-term bike position. This can be separated by 3 steps:
 - Collecting a majority of shared bikes positions in time
-- Building a proper neural network and train it
-- Predicting the bike postion in sepcific area and time
+- Building a proper neural network and train it with subway card data
+- Predicting the position in specific area and time
 
 An example for this application: The origin and destination are marked as 'start' and 'end' on the picture below. In a traditional navigation, for example, I need to take the metro first (the green line) and walk through a long way. In this application, it will show you the available bikes before you leave the metro station.
 ![](/img/in_post/2017/04/20170416154448.jpg)
@@ -33,11 +37,11 @@ Remark: This project is only a conception now
 
 ## Data Collection
 
-Utilizing the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Openning the webpage, it will request your position and return informatio of all available bikes nearby. This can be a bike finder or a data collector now.
+Utilizing the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Opening the webpage, it will request your position and return information of all available bikes nearby. This can be a bike finder or a data collector now.
 
 [![](/img/in_post/2017/04/3bikes.jpg)](/img/in_post/2017/04/3bikes.jpg)
 
-The bikes from Yongan are not dockless, so you have to borrow or return it from fixed parking stations on the street. The postion of these static bikes are fixed and you can check the number of available bikes from these stations. Mobike and ofo have no fixed postion for parking so what you get are GPS coodrdinates from their bikes.
+The bikes from Yongan are not dockless, so you have to borrow or return it from fixed parking stations on the street. The position of these static bikes are fixed and you can check the number of available bikes from these stations. Mobike and ofo have no fixed position for parking so what you get is GPS coordinates from their bikes.
 
 Example of the data：
 
@@ -117,8 +121,8 @@ Position simulation in Nanjing
 
 ## Tips for data collection
 
-- For a better network connection in China, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the basic map layer with Leaflet. They are all top on pictures, so the map may not be very clear on some high resolution screens. I'm going to try using the library by Amap or Google Maps to show it again.
-- If you want to require the position from the user through HTML5, you need a https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a ssl certification and its deployment on the server.
+- For a better network connection in China, you can select [ChineseTmsProviders](https://github.com/htoooth/Leaflet.ChineseTmsProviders) to show the basic map layer with Leaflet. They are all top on pictures, so the map may not be very clear on some high resolution screens. I'm going to use the library developed by Amap or Google Maps to show it better.
+- If you want to require the position from the user through HTML5, you need a https connection. Of course, http protocol works fine with localhost for a test site. This problem takes me another 3 hours for applying a SSL certification and its deployment on the server.
 - You have to take a token to access the data from ofo and the token is generated after you login the system.
 - There are a lot of Chinese characters in Yongan's data. If you use PHP to clean the data, the function below may helps.
 {% highlight php %}
@@ -138,10 +142,10 @@ public function ext_json_decode($str, $mode=false){
 
 ## Next Step
 
-The next step is to make the data collection better and to use deep learning to predict the bike postions(********).
+The next step is to make the data collection better and to use deep learning to predict the bike positions(********).
 
-A bike return is stochastic. Therefore, I think it needs a deep neural network to reveal the corelation between bike postion in the future and the historical user behaviors.
+A bike return is stochastic. Therefore, I think it needs a deep neural network to reveal the correlation between bike position in the future and the historical user behaviors.
 
-Tensorflow is a great tool for this project. I am looking forward to building a suitable neural network with Tensorflow and predicting the postions(********) with high accuracy.
+Tensorflow is a great tool for this project. I am looking forward to building a suitable neural network with Tensorflow and predicting the positions(********) with high accuracy.
 
 To be continued...
