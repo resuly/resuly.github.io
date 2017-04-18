@@ -150,6 +150,4 @@ A bike return is stochastic. Therefore, I think it needs a deep neural network t
 
 Tensorflow is a great tool for this project. I am looking forward to building a suitable neural network with Tensorflow and predicting the positions with a high accuracy.
 
-To be continued…
-
 To be continued...
