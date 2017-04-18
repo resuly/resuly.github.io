@@ -13,13 +13,13 @@ tags:
 
 ## Background
 
-Shared bike is a hot topic in China now. The number of shared bike users have been rapidly growing since ***** launched the first shared bike program. With its popularoty, many different kinds(in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accomodate bike users. Since most bikes are dockless, users can rent and return it at any place they want. As a result, the users need to install several Apps developed by many companies to find a bike located neeaerby them. It not convinient for them.
+Shared bike is a hot topic in China now. The number of shared bike users have been rapidly growing since Wei Dai (the founders and CEO of the ofo) launched the first dockless shared bike program in Beijing. With its popularity, many different kinds(in shape, price, and operation) of shared bikes have been introduced into the China market. In Nanjing (A city in China), more than 5 companies operate together to accomodate bike users. Since most bikes are dockless, users can rent and return it at any place they want. As a result, the users need to install several Apps developed by many companies to find a bike located neeaerby them. It not convinient for them.
 
 ![Different color stand for different operator](/img/in_post/2017/04/bikes.jpg)
 
-We already have a navigation map  which navigates for public trasportation with bus, metro, and walking. However, the bike-sharing system is not participated in. There are two main challenges in integrating shared bikes into a traditional navigation system. I list them as below.
-- Making the positional prediction for dockless bikes (people may return it anywhere)
+We already have a navigation map which navigates for public trasportation with bus, metro, and walking. However, the bike-sharing system is not participated in. There are two main challenges in integrating shared bikes into a traditional navigation system. I list them as below.
 - Too many different bike operators. It is hard to integrate all information together.
+- Making the positional prediction for dockless bikes (people may return it anywhere)
 
 I want to make an application to achieve a complete transit navigation. The core step is to use a deep learning technique to predit a short-term bike postion. This can be separated by 3 steps:
 - Collecting a majority of shared bikes positions in time
@@ -33,7 +33,7 @@ Remark: This project is only a conception now
 
 ## Data Collection
 
-Utilising the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Openning the webpage, it will request your position and return informatio of all available bikes nearby. This can be a bike finder or a data collector now.
+Utilizing the position APIs of Yongan, ofo, and Mobike, I made a webpage to put all real-time data together in GeoJSON format. Then I used [Leaflet.js](http://leafletjs.com/) to show bike information on map. Openning the webpage, it will request your position and return informatio of all available bikes nearby. This can be a bike finder or a data collector now.
 
 [![](/img/in_post/2017/04/3bikes.jpg)](/img/in_post/2017/04/3bikes.jpg)
 
