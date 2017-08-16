@@ -4,6 +4,8 @@ title: "如何让自己成为GTA5的主角？"
 date: "2017-08-16 17:25:29 +0800"
 author: "resuly"
 header-img: "img/post-bg-gta.jpg"
+tags:
+  - 3D模型
 ---
 
 ## 前言

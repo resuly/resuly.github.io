@@ -4,6 +4,10 @@ title: "使用Keras中的RNN模型进行时间序列预测"
 date: "2017-08-16 19:58:54 +0800"
 author: "resuly"
 header-img: "img/post-bg-city3.jpg"
+catalog: true
+tags:
+  - RNN
+  - 神经网络
 ---
 
 关于使用RNN进行时间预测的问题，中文的教程几乎为空白。本文结合国外几篇教程与自己的使用经验，详细描述如何使用Keras中的RNN模型进行对时间序列预测。
