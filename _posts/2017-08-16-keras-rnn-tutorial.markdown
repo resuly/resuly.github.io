@@ -105,8 +105,8 @@ def get_data(path_to_dataset='bike_rnn.csv', sequence_length=20):
 {% highlight python %}
     result_mean = result.mean()
     result -= result_mean
-    print "Shift : ", result_mean
-    print "Data  : ", result.shape
+    print("Shift : ", result_mean)
+    print("Data  : ", result.shape)
 {% endhighlight %}
 
 如果数据预处理过的话，训练效果往往更好 (cf Y. Lecun's 1995 [paper](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf), section 4.3)。而且就时间序列的数据类型而言，我们并不希望处理后的数据和真实数据偏差非常大，所以本文用了一直非常简单的方法进行数据的预处理工作。首先计算整个数据的平均值，然后把每个原始数据都减去这个均指，这样数据整体的变化就在0上下波动。
@@ -136,7 +136,7 @@ def get_data(path_to_dataset='bike_rnn.csv', sequence_length=20):
 
 在这个函数的最后，我们用 list 返回 `X_train, y_train, X_test, y_test` 。
 
-## 创建模型
+### 创建模型
 
 {% highlight python %}
 def build_model():
@@ -179,13 +179,13 @@ def build_model():
 {% highlight python %}
     start = time.time()
     model.compile(loss="mse", optimizer="rmsprop")
-    print "Compilation Time : ", time.time() - start
+    print("Compilation Time : ", time.time() - start)
     return model
 {% endhighlight %}
 
 我们使用  MSE（Mean Square Error）进行误差计算，优化函数选择 `RMSprop` （线性回归问题的的标准做法）。
 
-## Return_Sequence
+### Return_Sequence
 
 目前未知我们还没看 `return_sequence=` 这个参数在 LSTM 层中的作用。我们用 Andrej Karpathy 的这张经典的RNN示意图来理解这个参数的作用。下图中红色的代表序列输入，绿色的代表展开的 LSTM 神经元，蓝色代表输出。注意到绿色的有两个输入，一个是来自上一个自己，另一个来自现在的输入。
 
@@ -240,13 +240,13 @@ def run_network(model=None, data=None):
     path_to_dataset = 'bike_rnn.csv'
 
     if data is None:
-        print 'Loading data... '
+        print('Loading data... ')
         X_train, y_train, X_test, y_test = get_data(
                 path_to_dataset, sequence_length, ratio)
     else:
         X_train, y_train, X_test, y_test = data
 
-    print '\nData Loaded. Compiling...\n'
+    print('\nData Loaded. Compiling...\n')
 
     if model is None:
         model = build_model()
@@ -262,7 +262,7 @@ def run_network(model=None, data=None):
         predicted = model.predict(X_test)
         predicted = np.reshape(predicted, (predicted.size,))
     except KeyboardInterrupt:
-        print 'Training duration (s) : ', time.time() - global_start_time
+        print('Training duration (s) : ', time.time() - global_start_time)
         return model, y_test, 0
 {% endhighlight %}
 
@@ -283,8 +283,8 @@ def run_network(model=None, data=None):
         plt.plot(predicted[:100, 0])
         plt.show()
     except Exception as e:
-        print str(e)
-    print 'Training duration (s) : ', time.time() - global_start_time
+        print(str(e))
+    print('Training duration (s) : ', time.time() - global_start_time)
     return model, y_test, predicted
 {% endhighlight %}
 
