@@ -187,7 +187,7 @@ def build_model():
 
 ### Return_Sequence
 
-目前未知我们还没看 `return_sequence=` 这个参数在 LSTM 层中的作用。我们用 Andrej Karpathy 的这张经典的RNN示意图来理解这个参数的作用。下图中红色的代表序列输入，绿色的代表展开的 LSTM 神经元，蓝色代表输出。注意到绿色的有两个输入，一个是来自上一个自己，另一个来自现在的输入。
+直到目前为止我们还没有看 `return_sequence=` 这个参数在 LSTM 层中的作用。我们用 Andrej Karpathy 的这张经典的RNN示意图来理解这个参数的作用。下图中红色的代表序列输入，绿色的代表展开的 LSTM 神经元，蓝色代表输出。注意到绿色的有两个输入，一个是来自上一个自己，另一个来自现在的输入。
 
 ![Karpathy对RNN网络的经典示意图](/img/in_post/2017/08/2f64696167732e6a706567.jpg)
 
