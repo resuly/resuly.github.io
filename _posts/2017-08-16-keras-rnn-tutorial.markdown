@@ -66,7 +66,7 @@ np.random.seed(2017)
 -   `models` 是 Keras 神经网络的核心。这个对象代表这个我们所定义的神经网络：它有层、激活函数等等属性和功能。我们进行训练和测试也是基于这个`models`。 `Sequetial` 表示我们将使用层堆叠起来的网络，这是Keras中的基本网络结构。
 -   `Dense, Activation, Dropout` 这些是神经网络里面的核心层，用于构建整个神经网络。Dense 实际上就是 Fully-connected 层；Activation是激活函数，它会通过Relu, Softmax 等函数对上一层产生的结果进行修改；当神经元过多的时候，可能效果并不好，因为容易导致过拟合的现象，Dropout是将上一层神经元进行随机丢弃，有助于解决过拟合的问题。
 -   `LSTM` 是经典的RNN神经网络层。LSTM 的内部结构非常复杂，如果想要深入了解的话可以看以下材料： （Chris Olah's [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) ）
--   `np.random.see`是随机种子，我们在下面的会进行随机数的操作，为了这一过程的可重复性，我们设置一个随机种子，让每次随机结果相同。
+-   `np.random.seed`是随机种子，我们在下面的会进行随机数的操作，为了这一过程的可重复性，我们设置一个随机种子，让每次随机结果相同。
 
 
 ### 准备数据
@@ -199,7 +199,7 @@ def build_model():
 
 ### 更详细的解释
 
-如果你还不是特别清楚的话，我们聚个更简单的例子，把序列的长度设为4，这样就是用前3个去预测第4个。前三个为输入值，第四个为真实值。
+如果你还不是特别清楚的话，我们举一个更简单的例子，把序列的长度设为4，这样就是用前3个去预测第4个。前三个为输入值，第四个为真实值。
 
 1.  输入序列的第一个值输入网络
 
@@ -217,7 +217,7 @@ def build_model():
 
     a. 第一层 LSTM表现如 (2.a)
 
-    b. 第二层 LSTM表现与 (2.b)基本一样，但这一次第二层将运算结果也同时传给了下一层 ， `Dense` 层。
+    b. 第二层 LSTM表现与 (2.b) 基本一样，但这一次第二层将运算结果也同时传给了下一层 ， `Dense` 层。
 
     c. `Dense` 层计算自己输出结果，也就是我们最终的预测值（第四个值的预测值）。
 
@@ -305,7 +305,8 @@ def run_network(model=None, data=None):
 
 
 
->   References
+>   *References*
+>
 >
 >   Daniel Hnyk: [http://danielhnyk.cz/predicting-sequences-vectors-keras-using-rnn-lstm/](http://danielhnyk.cz/predicting-sequences-vectors-keras-using-rnn-lstm/)
 >
