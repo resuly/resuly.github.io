@@ -34,7 +34,7 @@ Keras 2.0.6 (backend: tensorflow-gpu)
 
 本文的主要任务就是进行时间序列预测，主要模型为 Recurrent Neural Networks (RNNs)。数据为苏州市公共自行车某个站点可借车辆数量的数据，一分钟一次。这样的自行车都是有桩的，一个站点有40个桩，过满或者过空都不太好。我们这些历史数据去预测将来的可接车辆数。
 
-![](/img/in_post/2017/08/IMG_5377.JPG)
+![](/img/in_post/2017/08/IMG_5377.jpg)
 
 数据下载：[bike.csv](/data/bike_rnn.csv)
 
