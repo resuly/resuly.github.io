@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: resulycheng@gmail.com
 description: ""
 keyword: "resuly"
-url: "resuly.me"  # your host, for absolute URL
+url: "http://resuly.me"  # your host, for absolute URL
 baseurl: ""        # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
