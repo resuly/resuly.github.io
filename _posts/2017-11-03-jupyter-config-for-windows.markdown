@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "把Jupyter Note配置成Coding神器"
+title: "把Jupyter Notebook配置成Coding神器"
 date: "2017-11-03 16:33:29 +0800"
 author: "resuly"
 header-img: "img/post-bg-unix-linux.jpg"
@@ -8,7 +8,7 @@ tags:
   - Jupyter, Windows, python
 ---
 
-Anaconda装完以后，在Windows平台下默认的Jupyter字体是宋体，看起来十分难受。另外写代码时候的快捷键、自动格式化代码等功能也都不如在Sublime Text编辑器中那样顺畅。本文主要介绍如何在安装好Jupyter之后，进一步的配置它，让它用起来更加得心应手，极大提高你的开发效率。
+Anaconda装完以后，还是有很多不爽的地方。比如在Windows平台下默认的Jupyter Notebook字体是宋体，看起来十分难受。比如写代码时候的快捷键、自动格式化代码等功能也都不如在Sublime Text编辑器中那样顺畅。本文主要介绍如何在安装好Jupyter之后，进一步的配置它，让它用起来更加得心应手，极大提高你的开发效率。
 
 ## 修改字体+配置Sublime Text快捷键
 第一步当然是修改字体了，由于强迫症的原因，我没法在中英文都是宋体的情况下编程。
@@ -62,7 +62,7 @@ require(["codemirror/keymap/sublime", "notebook/js/cell", "base/js/namespace"],
 {% endhighlight %}
 
 Sublime Text编辑器中内置了多种快捷键，可以很方便的进行代码编辑。
-我结合日常使用习惯，把Jupyter中的常用快捷键进行了整理，并录制了GIF演示图。
+我结合日常使用习惯，把Jupyter中的常用快捷键进行了整理，并录制了GIF演示图。（手机浏览请左右滑动下面的表格）
 <style>
 #shortcuts img{margin:0}
 </style>
