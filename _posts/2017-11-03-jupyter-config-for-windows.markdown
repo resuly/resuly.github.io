@@ -8,7 +8,7 @@ tags:
   - Jupyter, Windows, python
 ---
 
-Anaconda装完以后，还是有很多不爽的地方。比如在Windows平台下默认的Jupyter Notebook字体是宋体，看起来十分难受。比如写代码时候的快捷键、自动格式化代码等功能也都不如在Sublime Text编辑器中那样顺畅。本文主要介绍如何在安装好Jupyter之后，进一步的配置它，让它用起来更加得心应手，极大提高你的开发效率。
+Anaconda装完以后，Jupyter Notebook给python开发效率带来了几何级的提升。不论是代码测试、Markdown、管理、分享等功能，都让人眼前一亮。不过比起传统的编辑器，还是有很多让人不爽的地方。比如在Windows平台下默认的Jupyter Notebook字体是宋体，看起来让人抓狂。比如写代码时候，没有Sublime Text中的快捷键、自动格式化等操作。总之用起来还不够顺畅，好像少点什么。本文主要介绍如何在安装好Jupyter之后，进一步的配置它，让它用起来更加得心应手。
 
 ## 修改字体+配置Sublime Text快捷键
 第一步当然是修改字体了，由于强迫症的原因，我没法在中英文都是宋体的情况下编程。
