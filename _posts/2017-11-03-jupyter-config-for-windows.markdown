@@ -192,6 +192,6 @@ pip install yapf
 ![](/img/in_post/2017/11/20171107203426.png)
 启用后可以按快捷键，或者点锤子图标进行代码自动整理。比如锤一下下面这杂乱不堪的代码：
 ![](/img/in_post/2017/11/formatting.gif)
-心细的同学可能回发现，其实图标用的是Font Awesome字体，在配置中修改icon的样式就可以修改图标了，比如把锤子变成对号：fa-legal -> fa-check。访问[http://fontawesome.io/icons/](http://fontawesome.io/icons/)，查看所有可以用的图标。
+细心的读者可能会发现，其实图标用的是Font Awesome字体，在配置中修改icon的样式就可以修改对应的图标了，比如把锤子变成对号：fa-legal -> fa-check。访问[http://fontawesome.io/icons/](http://fontawesome.io/icons/)，查看所有可以用的图标。
 
 其实还有很多其他功能可以使用，希望大家都能够利用Jupyter Notebook提高自己的开发效率。欢迎留言，一起探索交流。
