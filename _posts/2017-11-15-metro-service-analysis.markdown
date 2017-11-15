@@ -9,18 +9,21 @@ tags:
 ![](/img/in_post/2017/11/20171115155851.png)
 这是一张很有意思的地图，由Chris Whong在2015年创建，作者称[这副图](https://chriswhong.com/local/this-ugly-map-got-a-lot-of-attention-today/)为地铁沙漠（subway deserts）。它显示的区域，是纽约地铁站500m范围内覆盖不到的地方。作者将地铁站附近的区域覆盖起来，然后看看剩余的地方是什么样子的。这对轨道交通的服务范围和规划工作有一定的参考意义。如今中国的地铁站的通常被共享单车包围，骑行或者步行的范围是多大？还有哪些地方没有被覆盖到，这是一个值得关注的问题。
 
-本文利用Mapbox进行数据可视化，对南京和苏州的地铁站进行分析。
+随着数据可视化技术的迅速发展，Chris Whong的地图现在已经比较容易实现。本文利用Mapbox GL JS API进行开发，对南京和苏州的地铁站的服务半径进行分析。
 
 ## 确定骑行和步行距离
+实际上地铁沙漠图就是以地铁站为中心画圆，首先需要确定这个圆的半径。本文考虑分别对步行距离和公共自行车的骑行距离为半径进行画圆，看看两种方式的差异，以及潜在的问题。
+
 南京对共享单车缺乏监管，导致共享单车万花筒式发展，但大家骑车一般有多快？Mobike给出了这个问题的答案。在[从共享单车大数据看TOD](http://blogs.worldbank.org/sustainablecities/understanding-transit-oriented-development-through-bike-sharing-big-data)的报告中指出：
 * 男性：10.7mins 9.26km/h
 * 女性：10.9mins 9.17km/h
 * 平均：10.8mins 9.22km/h
+
 所以摩拜单车的平均骑行速度为9.22km/h，骑行距离为1.659km。这个距离也可以代表南京市民的平均骑行距离。
 
 遗憾的是，苏州至今仅有永安行自行车可用。从以往的数据分析可知，有效骑行记录为18823892条，平均骑行时间为16.106分钟。假设不同品牌的单车骑行速度相差不多的情况下，参考摩拜单车的平均骑行速度（9.22km/h），苏州市民平均骑行距离为2.474km。
 
-根据交通运输部&高德联合发布的[2016年度中国主要城市公共交通大数据分析报告](https://report.amap.com/download_city.do):
+在步行距离方面，根据交通运输部&高德联合发布的[2016年度中国主要城市公共交通大数据分析报告](https://report.amap.com/download_city.do):
 * 南京市民的平均步行出行距离为0.783公里
 * 苏州市民的平均步行出行距离为0.637公里
 
@@ -133,7 +136,7 @@ map.on('load', function() {
 {% endhighlight %}
 
 ## 结果
-最终加上可以调节服务半径的控件就大功告成了。
+最终加上可以调节服务半径的控件就大功告成了。在线版的应用点击左上角的标签，可以进行半径切换。
 * 南京市的在线访问地址：[http://afc.v2tm.com/metro/service/najing.html](http://afc.v2tm.com/metro/service/najing.html)
 * 苏州市的在线访问地址：[http://afc.v2tm.com/metro/service/suzhou.html](http://afc.v2tm.com/metro/service/suzhou.html)
 
