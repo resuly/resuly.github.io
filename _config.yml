@@ -68,6 +68,10 @@ service-worker: true
 friends: [
     {
         title: "TUPA",
-        href: "http://monash.v2tm.com/"
+        href: "http://inhi.kim/"
+    },
+    {
+        title: "Aaron",
+        href: "http://aerolith.ink/"
     }
 ]

@@ -22,13 +22,16 @@ Python 3.5
 
 Keras 2.0.6 (backend: tensorflow-gpu)
 
-如果使用 Keras 的话，选择 Tensorflow 或者 Theano 理论上均可以正确运行。对于 Windows10 而言，Tensorflow现在应该并不支持 Python2 的环境，官方的指定环境为 3.5。
+如果使用 Keras 的话，选择 Tensorflow 或者 Theano 理论上均可以正确运行。
 
-如果你用 [Anaconda](https://www.continuum.io/downloads) 的话，默认下载下载的是3.6的环境，安装 Tensorflow 需要再折腾一番。所以我个人的建议是先安装最新的 Anacoda， 然后把默认的环境改为 3.5 。具体命令如下：
+<del>对于 Windows10 而言，Tensorflow现在应该并不支持 Python2 的环境，官方的指定环境为 3.5。
 
-`conda install python=3.5.0`
+<del>如果你用 [Anaconda](https://www.continuum.io/downloads) 的话，默认下载下载的是3.6的环境，安装 Tensorflow 需要再折腾一番。所以我个人的建议是先安装最新的 Anacoda， 然后把默认的环境改为 3.5 。具体命令如下：</del>
+
+<del>`conda install python=3.5.0`</del>
 
 
+现已支持 Python 3.6，直接安装即可。
 
 ### 任务描述
 
