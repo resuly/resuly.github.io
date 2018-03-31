@@ -47,8 +47,6 @@ num表示自行车数量，weekday表示星期几，hour表示小时。一共459
 
 接下来我们将用多层LSTM 的RNN神经网络去预测这些序列的值，简单来说，我们有9个连续的num，那么如何预测第10个num是多少？（知道前九分钟的num，预测下一分钟的num）
 
-
-
 我们首先import 各种需要的依赖，然后定义模型进行训练，最后预测数据，利用 matplotlib 画出最终预测的结果。
 
 ### 加载依赖库
@@ -126,7 +124,7 @@ def get_data(path_to_dataset='bike_rnn.csv', sequence_length=20):
 
 下一步操作是把数据分为训练集和测试集，输入和输出。我们选了10%的数据作为测试，90%的数据进行训练。每个20长度的序列的最后一个值作为目标值，其余前面的部分作为输入值。输入值输入到模型，目标值是真实值，也就是模型想要达到的目标。
 
-`np.random.shuffle(train)`的含义就是将所有训练数据随机打乱，这样在训练的时候每次喂给模型的数据的概率分布是均匀的。为了方便可视化我们预测结果，对测试数据并没有进行打乱的操作。
+`np.random.shuffle(train)`的含义就是将所有训练数据随机打乱，这样在训练的时候每次喂给模型的数据的概率分布是均匀的。简单来说，如果不打乱的数据的话，在连续的训练过程中，很容易让模型的weights空间陷入局部最优，打乱这些数据能够更好的让模型的参数优化过程更好、更稳（更多解释见：[https://datascience.stackexchange.com/questions/24511/why-should-the-data-be-shuffled-for-machine-learning](https://datascience.stackexchange.com/questions/24511/why-should-the-data-be-shuffled-for-machine-learning-tasks)）。而为了方便可视化我们预测结果，对测试数据并没有进行打乱的操作（常规操作）。
 
 {% highlight python %}
     X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
