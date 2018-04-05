@@ -171,6 +171,8 @@ Sublime Text编辑器中内置了多种快捷键，可以很方便的进行代�
 除了以上功能，我个人还比较偏向代码折叠，自动整理对齐等功能。jupyter_contrib_nbextensions正是为了解决这样的个性化需求所提供的一款插件，安装代码如下：
 {% highlight cmd %}
 pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+
 pip install jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
 {% endhighlight %}
