@@ -137,8 +137,8 @@ map.on('load', function() {
 
 ## 结果
 最终加上可以调节服务半径的控件就大功告成了。在线版的应用点击左上角的标签，可以进行半径切换。
-* 南京市的在线访问地址：[http://afc.v2tm.com/metro/service/najing.html](http://afc.v2tm.com/metro/service/najing.html)
-* 苏州市的在线访问地址：[http://afc.v2tm.com/metro/service/suzhou.html](http://afc.v2tm.com/metro/service/suzhou.html)
+* 南京市的在线访问地址：[http://resuly.me/metro-service/najing.html](http://resuly.me/metro-service/najing.html)
+* 苏州市的在线访问地址：[http://resuly.me/metro-service/suzhou.html](http://resuly.me/metro-service/suzhou.html)
 
 由于Mapbox服务器在国外，访问可能略慢，稍等一会儿（或多刷新几次）就好。
 

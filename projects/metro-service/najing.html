@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in-miles-meters-with-mapbox-gl-js
+ -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>南京地铁服务半径分析</title>
+	<script src='./js/mapbox-gl.js'></script>
+	<script src='./js/jquery-3.2.1.min.js'></script>
+	<link href='./css/mapbox-gl.css' rel='stylesheet' />
+	<link href='./css/base.css' rel='stylesheet' />
+	<style>
+	*{margin:0;}
+          html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+          .leaflet-left, .leaflet-bottom{
+            display: none
+          }
+          #btn{
+          	position: fixed;
+          	left: 10px;
+          	background: #fff;
+          	top: 10px;
+          	    padding: 0;
+          }
+          .rounded-toggle input[type=radio]:checked + label, .rounded-toggle .active{
+		background: #2196F3;
+          	color: #fff;
+          }
+	</style>
+</head>
+
+<body>
+	<div id='map'></div>
+	<div class='rounded-toggle inline' id="btn">
+		<input id='pizza' type='radio' name='rtoggle' value='0.637' checked='checked'>
+		<label for='pizza' data-radius='0.783'>步行（0.783km）</label>
+		<input id='charlotte' type='radio' name='rtoggle' value='2.474'>
+		<label for='charlotte' data-radius='1.659'>骑行（1.659km）</label>
+	</div>
+	
+
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmVzdWx5IiwiYSI6ImNqMmxlbDduODAwYjMycW53ZGYxbzU2aXMifQ.XtrVs7zO5QBoxo0dhNzrTA';
+
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/resuly/cj9jwioad04xl2rrqiyvk1lzj',
+		center: [118.7757636, 32.0376083],
+		zoom: 10
+	});
+
+	var stations = [
+		[118.71299740000002, 32.010849],
+		[118.716217, 31.9978352],
+		[118.7282181, 31.9902706],
+		[118.7394638, 31.9844666],
+		[118.756485, 31.9933815],
+		[118.76940159999998, 32.008873],
+		[118.7765503, 32.0249443],
+		[118.7787704, 32.032924699999995],
+		[118.7789307, 32.0436707],
+		[118.7790375, 32.0533295],
+		[118.7785339, 32.060779600000004],
+		[118.77895359999998, 32.072216],
+		[118.7788315, 32.08184050000001],
+		[118.7918396, 32.0900993],
+		[118.7967682, 32.0977058],
+		[118.8044128, 32.1047211],
+		[118.7161179, 31.968502],
+		[118.7173996, 31.9857483],
+		[118.72389979999998, 32.0067711],
+		[118.7308807, 32.017677299999995],
+		[118.7343445, 32.0308342],
+		[118.7420959, 32.0370903],
+		[118.753273, 32.039608],
+		[118.7616806, 32.0447464],
+		[118.7707443, 32.044250500000004],
+		[118.7895432, 32.0432701],
+		[118.8004532, 32.0422897],
+		[118.8146439, 32.041378],
+		[118.8297424, 32.04216769999999],
+		[118.843483, 32.0396652],
+		[118.8532333, 32.0376244],
+		[118.8644638, 32.0413933],
+		[118.8897247, 32.0518608],
+		[118.90100859999998, 32.074008899999995],
+		[118.9010544, 32.0739784],
+		[118.8999405, 32.0871735],
+		[118.9117508, 32.0935898],
+		[118.9253769, 32.1010056],
+		[118.9350433, 32.10622410000001],
+		[118.9543304, 32.1110725],
+		[118.9713974, 32.11828610000001],
+		[118.7577209, 31.9812851],
+		[118.769455, 31.9792557],
+		[118.7804642, 31.9799709],
+		[118.7924271, 31.9722328],
+		[118.8120956, 31.9658222],
+		[118.8150101, 31.9542446],
+		[118.8164062, 31.946119300000003],
+		[118.8161011, 31.9344292],
+		[118.82773590000002, 31.9318199],
+		[118.8393784, 31.9340706],
+		[118.8583832, 31.9398136],
+		[118.8720856, 31.9421978],
+		[118.88996499999999, 31.933018],
+		[118.8997574, 31.9150295],
+		[118.9091415, 31.8998718],
+		[118.7166138, 32.0176544],
+		[118.7119141, 32.0262756],
+		[118.6986542, 32.034317],
+		[118.66546799999999, 32.057003],
+		[118.65184779999998, 32.064106],
+		[118.6431732, 32.0690193],
+		[118.6303635, 32.066852600000004],
+		[118.621582, 32.0595245],
+		[118.6100998, 32.0466881],
+		[118.8683395, 31.7325592],
+		[118.8241043, 31.7569389],
+		[118.8165131, 31.7936401],
+		[118.80065159999998, 31.847566600000004],
+		[118.7904587, 31.8880539],
+		[118.79140600000001, 31.914108000000002],
+		[118.77948, 31.9444332],
+		[118.7108994, 32.1466866],
+		[118.7133636, 32.1559029],
+		[118.7144012, 32.1799049],
+		[118.7218094, 32.2047729],
+		[118.7255936, 32.217186],
+		[118.7348633, 32.231098200000005],
+		[118.7484894, 32.2466393],
+		[118.7711487, 32.2756653],
+		[118.7803268, 32.2880135],
+		[118.80556499999999, 32.304961],
+		[118.8151321, 32.321209],
+		[118.83153529999998, 32.3366699],
+		[118.8401108, 32.3492928],
+		[118.8448563, 32.3615456],
+		[118.88658909999998, 32.40205],
+		[118.9280243, 32.4292336],
+		[118.9588318, 32.4673119],
+		[118.6665955, 32.1659126],
+		[118.6916504, 32.1597633],
+		[118.7029572, 32.1584549],
+		[118.7288818, 32.1529083],
+		[118.7411804, 32.1420326],
+		[118.7646103, 32.1176338],
+		[118.7723465, 32.1127205],
+		[118.7802811, 32.0971642],
+		[118.810396, 32.076373],
+		[118.7927628, 32.0594521],
+		[118.79112240000002, 32.0513153],
+		[118.78713229999998, 32.0357094],
+		[118.7859344, 32.0256424],
+		[118.789444, 32.0156937],
+		[118.7870865, 32.0061264],
+		[118.7903748, 31.9972267],
+		[118.7948837, 31.9880714],
+		[118.7952728, 31.9791412],
+		[118.7986221, 31.9614334],
+		[118.8021851, 31.945835100000004],
+		[118.8033676, 31.9299049],
+		[118.8158722, 31.9180546],
+		[118.8247528, 31.9100285],
+		[118.8254242, 31.8981037],
+		[118.831018, 31.868832]
+	];
+
+	function createGeoJSONCircle(stations,km=0.783) {
+		var features = [];
+		var points = 64;
+
+		for (var j = 0; j < stations.length; j++) {
+			center = stations[j];
+			var coords = {
+				latitude: center[1],
+				longitude: center[0]
+			};
+
+			var ret = [];
+			var distanceX = km / (111.320 * Math.cos(coords.latitude * Math.PI / 180));
+			var distanceY = km / 110.574;
+
+			var theta, x, y;
+			for (var i = 0; i < points; i++) {
+				theta = (i / points) * (2 * Math.PI);
+				x = distanceX * Math.cos(theta);
+				y = distanceY * Math.sin(theta);
+				ret.push([coords.longitude + x, coords.latitude + y]);
+			}
+
+			ret.push(ret[0]);
+			features.push({
+				"type": "Feature",
+				"geometry": {
+					"type": "Polygon",
+					"coordinates": [ret]
+				}
+			});
+		};
+
+		return {
+			"type": "geojson",
+			"data": {
+				"type": "FeatureCollection",
+				"features": features
+			}
+		};
+	};
+
+
+	map.on('load', function() {
+		var something = createGeoJSONCircle(stations);
+		// console.log(something)
+		// Add a layer showing the places.
+		map.addSource("polygon", something);
+		map.addLayer({
+			"id": "polygon",
+			"type": "fill",
+			"source": "polygon",
+			"layout": {},
+			"paint": {
+				"fill-color": "blue",
+				"fill-opacity": 0.3
+			}
+		});
+
+		// Change the cursor to a pointer when the mouse is over the places layer.
+		map.on('mouseenter', 'places', function() {
+			map.getCanvas().style.cursor = 'pointer';
+		});
+
+		// Change it back to a pointer when it leaves.
+		map.on('mouseleave', 'places', function() {
+			map.getCanvas().style.cursor = '';
+		});
+	});
+
+	map.addControl(new mapboxgl.NavigationControl());
+	
+	function addStationLayer(km) {
+		map.addSource("polygon", createGeoJSONCircle(stations, km));
+		map.addLayer({
+			"id": "polygon",
+			"type": "fill",
+			"source": "polygon",
+			"layout": {},
+			"paint": {
+				"fill-color": "blue",
+				"fill-opacity": 0.3
+			}
+		});
+	}
+
+	$(document).ready(function(){
+		$("label").click(function(){
+			map.removeLayer("polygon");
+			map.removeSource("polygon");
+			addStationLayer($(this).data('radius'))
+		});
+	});
+	</script>
+</body>
+
+</html>

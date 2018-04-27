@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in-miles-meters-with-mapbox-gl-js
+ -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>苏州地铁服务半径分析</title>
+	<script src='./js/mapbox-gl.js'></script>
+	<script src='./js/jquery-3.2.1.min.js'></script>
+	<link href='./css/mapbox-gl.css' rel='stylesheet' />
+	<link href='./css/base.css' rel='stylesheet' />
+	<style>
+	*{margin:0;}
+          html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+          .leaflet-left, .leaflet-bottom{
+            display: none
+          }
+          #btn{
+          	position: fixed;
+          	left: 10px;
+          	background: #fff;
+          	top: 10px;
+          	    padding: 0;
+          }
+          .rounded-toggle input[type=radio]:checked + label, .rounded-toggle .active{
+		background: #2196F3;
+          	color: #fff;
+          }
+	</style>
+</head>
+
+<body>
+	<div id='map'></div>
+	<div class='rounded-toggle inline' id="btn">
+		<input id='pizza' type='radio' name='rtoggle' value='0.637' checked='checked'>
+		<label for='pizza' data-radius='0.637'>步行（0.637km）</label>
+		<input id='charlotte' type='radio' name='rtoggle' value='2.474'>
+		<label for='charlotte' data-radius='2.474'>骑行（2.474km）</label>
+	</div>
+	
+
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmVzdWx5IiwiYSI6ImNqMmxlbDduODAwYjMycW53ZGYxbzU2aXMifQ.XtrVs7zO5QBoxo0dhNzrTA';
+
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/resuly/cj9jwioad04xl2rrqiyvk1lzj',
+		center: [120.618093,31.308563],
+		zoom: 10
+	});
+
+	var stations = [[120.751859, 31.328497], [120.739929, 31.327635], [120.728769, 31.32649], [120.71608, 31.325191], [120.70884, 31.324454], [120.700018, 31.325246], [120.675478, 31.319091], [120.666551, 31.317591], [120.655699, 31.315881], [120.645654, 31.314386], [120.634646, 31.311953], [120.626444, 31.310144], [120.618093, 31.308563], [120.609879, 31.30732], [120.595793, 31.306004], [120.58703, 31.30517], [120.572974, 31.303717], [120.561914, 31.302944], [120.552467, 31.302113], [120.544518, 31.296068], [120.545225, 31.285552], [120.537566, 31.280176], [120.525268, 31.278591], [120.513783, 31.277042], [120.650778, 31.439531], [120.646991, 31.432144], [120.640788, 31.423872], [120.628973, 31.418625], [120.620724, 31.405658], [120.619517, 31.390269], [120.621478, 31.37777], [120.622741, 31.368901], [120.619264, 31.355445], [120.608828, 31.346403], [120.610269, 31.339022], [120.606289, 31.333055], [120.597759, 31.321902], [120.595967, 31.313405], [120.596896, 31.306715], [120.593973, 31.3001], [120.593025, 31.293792], [120.594433, 31.287434], [120.595659, 31.281103], [120.604455, 31.27367], [120.610425, 31.267336], [120.610699, 31.258347], [120.625373, 31.254972], [120.644631, 31.251957], [120.659826, 31.251904], [120.669532, 31.251035], [120.680197, 31.250446], [120.693065, 31.25017], [120.700142, 31.250118], [120.718471, 31.255347], [120.722605, 31.262139], [120.735578, 31.265846], [120.752604, 31.271529], [120.765926, 31.272402], [120.776894, 31.274401], [120.695623, 31.139514], [120.675202, 31.139621], [120.658728, 31.139268], [120.639285, 31.13549], [120.619788, 31.133664], [120.611411, 31.138792], [120.610596, 31.147682], [120.611788, 31.157027], [120.614732, 31.164406], [120.628145, 31.171761], [120.635638, 31.180156], [120.628764, 31.205694], [120.62841, 31.223368], [120.624488, 31.238493], [120.624254, 31.269518], [120.622999, 31.278558], [120.621459, 31.286723], [120.620292, 31.293989], [120.619457, 31.300235], [120.618349, 31.307678], [120.61713, 31.313526], [120.615535, 31.322549], [120.606495, 31.332599], [120.60099, 31.338727], [120.598526, 31.346013], [120.59861, 31.364117], [120.595986, 31.376678], [120.594143, 31.392161], [120.593493, 31.399539], [120.600734, 31.40523], [120.574288, 31.184692], [120.59091, 31.185991], [120.596311, 31.193194], [120.592176, 31.205839], [120.591953, 31.21788], [120.599544, 31.226507], [120.617291, 31.232352]];
+
+	function createGeoJSONCircle(stations,km=0.637) {
+		var features = [];
+		var points = 64;
+
+		for (var j = 0; j < stations.length; j++) {
+			center = stations[j];
+			var coords = {
+				latitude: center[1],
+				longitude: center[0]
+			};
+
+			var ret = [];
+			var distanceX = km / (111.320 * Math.cos(coords.latitude * Math.PI / 180));
+			var distanceY = km / 110.574;
+
+			var theta, x, y;
+			for (var i = 0; i < points; i++) {
+				theta = (i / points) * (2 * Math.PI);
+				x = distanceX * Math.cos(theta);
+				y = distanceY * Math.sin(theta);
+				ret.push([coords.longitude + x, coords.latitude + y]);
+			}
+
+			ret.push(ret[0]);
+			features.push({
+				"type": "Feature",
+				"geometry": {
+					"type": "Polygon",
+					"coordinates": [ret]
+				}
+			});
+		};
+
+		return {
+			"type": "geojson",
+			"data": {
+				"type": "FeatureCollection",
+				"features": features
+			}
+		};
+	};
+
+
+	map.on('load', function() {
+		var something = createGeoJSONCircle(stations);
+		// console.log(something)
+		// Add a layer showing the places.
+		map.addSource("polygon", something);
+		map.addLayer({
+			"id": "polygon",
+			"type": "fill",
+			"source": "polygon",
+			"layout": {},
+			"paint": {
+				"fill-color": "blue",
+				"fill-opacity": 0.3
+			}
+		});
+
+		// Change the cursor to a pointer when the mouse is over the places layer.
+		map.on('mouseenter', 'places', function() {
+			map.getCanvas().style.cursor = 'pointer';
+		});
+
+		// Change it back to a pointer when it leaves.
+		map.on('mouseleave', 'places', function() {
+			map.getCanvas().style.cursor = '';
+		});
+	});
+
+	map.addControl(new mapboxgl.NavigationControl());
+	
+	function addStationLayer(km) {
+		map.addSource("polygon", createGeoJSONCircle(stations, km));
+		map.addLayer({
+			"id": "polygon",
+			"type": "fill",
+			"source": "polygon",
+			"layout": {},
+			"paint": {
+				"fill-color": "blue",
+				"fill-opacity": 0.3
+			}
+		});
+	}
+
+	$(document).ready(function(){
+		$("label").click(function(){
+			map.removeLayer("polygon");
+			map.removeSource("polygon");
+			addStationLayer($(this).data('radius'))
+		});
+	});
+	</script>
+</body>
+
+</html>
