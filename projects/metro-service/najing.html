@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
+<!--
 https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in-miles-meters-with-mapbox-gl-js
  -->
 
@@ -43,7 +43,7 @@ https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in
 		<input id='charlotte' type='radio' name='rtoggle' value='2.474'>
 		<label for='charlotte' data-radius='1.659'>骑行（1.659km）</label>
 	</div>
-	
+
 
 	<script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmVzdWx5IiwiYSI6ImNqMmxlbDduODAwYjMycW53ZGYxbzU2aXMifQ.XtrVs7zO5QBoxo0dhNzrTA';
@@ -243,7 +243,7 @@ https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in
 	});
 
 	map.addControl(new mapboxgl.NavigationControl());
-	
+
 	function addStationLayer(km) {
 		map.addSource("polygon", createGeoJSONCircle(stations, km));
 		map.addLayer({
@@ -266,6 +266,17 @@ https://stackoverflow.com/questions/37599561/drawing-a-circle-with-the-radius-in
 		});
 	});
 	</script>
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?d357403d92113a4faf6736dd0989a910";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
 </body>
 
 </html>
