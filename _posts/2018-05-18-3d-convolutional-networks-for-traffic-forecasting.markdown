@@ -6,7 +6,7 @@ header-img: "img/post-bg-fantasy.jpg"
 ---
 
 ## Intro
-I have spent a lot of time to pick up this background image for the post. It shows the Manhattan Peninsula, New York, and the sky reflects the buildings on the ground. This fantasy scene reminds me the complex relationship between space and time, which closely related to the topic of this article: Spatiotemporal forecasting of traffic by using 3d convolutional neural networks.
+It's not easy to pick up this background image for the post. It shows the Manhattan Peninsula, New York, and the sky reflects the buildings on the ground. This fantasy scene reminds me the complex relationship between space and time, which closely related to the topic of this article: Spatiotemporal forecasting of traffic by using 3d convolutional neural networks.
 
 <!-- ![Shanghai Stampede 2014](/img/in_post/2018/05/shanghai-stampede-2014.jpg) -->
 
@@ -34,11 +34,15 @@ With the 3D convolutional operation, the kernel shape is 3 dimensional and it mo
 <img src="/img/in_post/2018/05/3dconv.gif" style="width: 500px">
 
 ## Data and Model
-We take the bike sharing data in New York from the DeepST paper as an example here. The research area is split into 16*8 grids, each square has in and out flow at a particular moment. The in and out flow are numbers of return and borrow bikes in the corresponding region.
+We take the bike sharing data in New York (BikeNYC) from the DeepST paper as an example here. Every circle stands for a station and the color means the number of bikes in dock. The research area is split into 16*8 grids, each square has in and out flow at a particular moment. The in and out flow are numbers of return and borrow bikes in the corresponding region.
 
 <img src="/img/in_post/2018/05/areaNYbike.png" style="width: 700px">
-The model has three 3D convolutional layers and the flatten layer combines the external data like weather and holidays.
+
+The input is a time sequence from the time level of closeness, period and trend. They stand for the different extract frequency from raw data. If stack them together, the input shape would be X*16*8. The X is the number of timesteps.
+
 <img src="/img/in_post/2018/05/model.png" style="width: 400px">
+
+The model has three 3D convolutional layers and the flatten layer combines the external data like weather and holidays.
 
 ## Experiments
 I used Pytoch this time. The windows version just came out last month. It provides a lot of API and very easy to build a custom model structure. The author of ST-ResNet has opened his code, so we can reuse the dataset from Github.
