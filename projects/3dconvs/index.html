@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>The interactive visualization for the prediction of 3D ConvNets</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>The interactive visualization for the prediction of 3D ConvNets</h1>
+  <div class="heatmap">
+    <button id="play-button">Play</button>
+    <div id="error">
+      <span>FLow in RMSE</span>
+      <h3 id="in_rmse">0</h3>
+      <span>FLow out RMSE</span>
+      <h3 id="out_rmse">0</h3>
+    </div>
+  </div>
+  <div class="note">
+    <p>
+      Each 16*8 grids represents the area the New York bike sharing system.
+      There are two different types of traffic flow: flow in and flow out, which means the number of bikes been borrowed or returned in every square.
+      This figure shows the forecasted result by 3D ConvNets from 22/09/2014 to 01/10/2014.
+      <a href="http://resuly.me" target="_blank">Click here</a> for more information.
+    </p>
+    <p>
+      Made by <a href="http://resuly.me" target="_blank">resuly</a>, May 2018.
+    </p>
+  </div>
+
+  <script src="js/d3.min.js"></script>
+  <script src="js/function.min.js"></script>
+  <script src="js/index.min.js"></script>
+
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?d357403d92113a4faf6736dd0989a910";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+</body>
+</html>
