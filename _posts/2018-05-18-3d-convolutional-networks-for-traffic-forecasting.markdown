@@ -60,7 +60,7 @@ Although the model is much simpler than Deep-ST or ST-ResNet, it still achieved 
 ## Visualization
 <img src="/img/in_post/2018/05/0.png" style="">
 
-Firstly, I have tried the Matplotlib in Python. But the outcomes are good but they are static and not appropriate for the webpage. So I chose d3.js to draw the diagram from scratch. (The style with CSS and SVG tags drive me crazy, it is incompatible with this blog responsive CSS sheet. So I just give up displaying it on this page. Here is the gif version, simple and straightforward.)
+Firstly, I have tried the Matplotlib in Python. The outcomes are good but they are static and not appropriate for the webpage. So I chose d3.js to draw the diagram from scratch. (The style with CSS and SVG tags drive me crazy, it is incompatible with this blog responsive CSS sheet. So I just give up displaying it on this page. Here is the gif version, simple and straightforward.)
 
 <img src="http://7xml0w.com1.z0.glb.clouddn.com/3dvis.gif">
 
