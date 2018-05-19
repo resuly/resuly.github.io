@@ -45,7 +45,7 @@ The input is a time sequence from the time level of closeness, period and trend.
 The model has three 3D convolutional layers and the flatten layer combines the external data like weather and holidays.
 
 ## Experiments
-I used Pytoch this time. The windows version just came out last month. It provides a lot of API and very easy to build a custom model structure. The author of ST-ResNet has opened his code, so we can reuse the dataset from Github.
+I used Pytorch this time. The windows version just came out last month. It provides a lot of API and very easy to build a custom model structure. The author of ST-ResNet has opened his code, so we can reuse the dataset from Github.
 
 To get the best kernel size, we take different combinations for training test. It turns out that 3*3*3 is also the optimal option for transportation data just like other papers have pointed out in some behavior detection tasks.
 
