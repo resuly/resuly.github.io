@@ -34,11 +34,11 @@ With the 3D convolutional operation, the kernel shape is 3 dimensional and it mo
 <img src="/img/in_post/2018/05/3dconv.gif" style="width: 500px">
 
 ## Data and Model
-We take the bike sharing data in New York (BikeNYC) from the DeepST paper as an example here. Every circle stands for a station and the color means the number of bikes in dock. The research area is split into 16*8 grids, each square has in and out flow at a particular moment. The in and out flow are numbers of return and borrow bikes in the corresponding region.
+We take the bike sharing data in New York (BikeNYC) from the DeepST paper as an example here. Every circle stands for a station and the color means the number of bikes in dock. The research area is split into 16×8 grids, each square has in and out flow at a particular moment. The in and out flow are numbers of return and borrow bikes in the corresponding region.
 
 <img src="/img/in_post/2018/05/areaNYbike.png" style="width: 700px">
 
-The input is a time sequence from the time level of closeness, period and trend. They stand for the different extract frequency from raw data. If stack them together, the input shape would be X*16*8. The X is the number of timesteps.
+The input is a time sequence from the time level of closeness, period and trend. They stand for the different extract frequency from raw data. If stack them together, the input shape would be X×16×8. The X is the number of timesteps.
 
 <img src="/img/in_post/2018/05/model.png" style="width: 400px">
 
@@ -47,7 +47,7 @@ The model has three 3D convolutional layers and the flatten layer combines the e
 ## Experiments
 I used Pytorch this time. The windows version just came out last month. It provides a lot of API and very easy to build a custom model structure. The author of ST-ResNet has opened his code, so we can reuse the dataset from Github.
 
-To get the best kernel size, we take different combinations for training test. It turns out that 3*3*3 is also the optimal option for transportation data just like other papers have pointed out in some behavior detection tasks.
+To get the best kernel size, we take different combinations for training test. It turns out that 3×3×3 is also the optimal option for transportation data just like other papers have pointed out in some behavior detection tasks.
 
 <img src="/img/in_post/2018/05/kernel_size_TestRMSE.png" style="width:450px">
 

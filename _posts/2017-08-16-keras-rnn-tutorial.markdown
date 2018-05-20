@@ -10,7 +10,7 @@ tags:
   - 神经网络
 ---
 
-关于使用RNN进行时间预测的问题，中文的教程几乎为空白。本文结合国外几篇教程与自己的使用经验，详细描述如何使用Keras中的RNN模型进行对时间序列预测。
+关于使用RNN进行时间预测的问题，中文相关教程还很少。所以本文结合国外几篇教程与自己的使用经验，详细描述如何使用Keras中的RNN模型进行对时间序列预测。
 
 ### 开发环境
 
@@ -62,8 +62,8 @@ from keras.layers.recurrent import LSTM
 np.random.seed(2017)
 {% endhighlight %}
 
--   `matplotlib`, `numpy`, `time` 分别用于画图、python数组、系统时间
--   `csv` 模块可以直接从文本里面读取数据
+-   `matplotlib`, `numpy`, `time` 分别用于画图、python数组、系统时间。
+-   `csv` 模块可以直接从文本里面读取数据，也可以使用 `pandas` 或者 `numpy`。
 -   `models` 是 Keras 神经网络的核心。这个对象代表这个我们所定义的神经网络：它有层、激活函数等等属性和功能。我们进行训练和测试也是基于这个`models`。 `Sequetial` 表示我们将使用层堆叠起来的网络，这是Keras中的基本网络结构。
 -   `Dense, Activation, Dropout` 这些是神经网络里面的核心层，用于构建整个神经网络。Dense 实际上就是 Fully-connected 层；Activation是激活函数，它会通过Relu, Softmax 等函数对上一层产生的结果进行修改；当神经元过多的时候，可能效果并不好，因为容易导致过拟合的现象，Dropout是将上一层神经元进行随机丢弃，有助于解决过拟合的问题。
 -   `LSTM` 是经典的RNN神经网络层。LSTM 的内部结构非常复杂，如果想要深入了解的话可以看以下材料： （Chris Olah's [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) ）
@@ -229,8 +229,6 @@ def build_model():
 
 另一方面，第二层设置 `return_sequence=False` 的原因是下一层只需要最后一个输入序列的预测结果，所以在最后一个值计算完成后，将结果传同时给下一层。从一次序列输入的整体过程来看，第二层LSTM并没有产生一个时间序列，而是产生了一个预测向量（大小是我们之前定义的 `layer[2]` ，也就是100）。最后的 `Dense` 层用于集中这个预测向量中所有的信息，并通过矩阵相乘的方式得到最终的预测值（第四个值的预测值）。
 
-### 更进一步
-
 如果我们连续堆砌三个 RNN 的隐含层，那么我们就需要把前两个设置成 `return_sequence=True` ，最后一个设置为`return_sequence=False` 。换句话说， `return_sequence=False` 被用于 RNN 层与 Feedforward 层（卷积神经网络、Fully-connected神经网络等）之间连接的桥梁。
 
 ### 运行神经网络
@@ -306,7 +304,7 @@ def run_network(model=None, data=None):
 
 
 
->   *References*
+>   **References**
 >
 >
 >   Daniel Hnyk: [http://danielhnyk.cz/predicting-sequences-vectors-keras-using-rnn-lstm/](http://danielhnyk.cz/predicting-sequences-vectors-keras-using-rnn-lstm/)

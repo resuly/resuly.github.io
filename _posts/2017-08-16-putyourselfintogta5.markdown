@@ -13,10 +13,9 @@ tags:
 
 后来就开始琢磨，怎么才能把自己放到游戏里面呢？经过各种折腾和尝试，终于把自己放到了GTA5里面。效果如如下：
 
-<video width="650" controls="controls" autoplay="autoplay" onloadstart="this.volume=0">
+<video width="650" autoplay loop muted>
   <source src="/img/in_post/2017/08/IMG_4189.mp4" type="video/mp4">
 </video>
-
 
 ## PC端软件
 
