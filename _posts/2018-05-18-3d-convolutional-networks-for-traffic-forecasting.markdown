@@ -3,6 +3,11 @@ layout: post
 title: "3D Convolutional Networks for Traffic Forecasting"
 date: "2018-05-18 17:05:13 +0800"
 header-img: "img/post-bg-fantasy.jpg"
+tags:
+  - 3D CNN
+  - Traffic Forecasting
+  - Spatiotemporal Data
+  - Deep Learning
 ---
 
 ## Intro
@@ -47,18 +52,25 @@ The model has three 3D convolutional layers and the flatten layer combines the e
 ## Experiments
 I used Pytorch this time. The windows version just came out last month. It provides a lot of API and very easy to build a custom model structure. The author of ST-ResNet has opened his code, so we can reuse the dataset from Github.
 
-To get the best kernel size, we take different combinations for training test. It turns out that 3×3×3 is also the optimal option for transportation data just like other papers have pointed out in some behavior detection tasks.
-
-<img src="/img/in_post/2018/05/kernel_size_TestRMSE.png" style="width:450px">
+<img src="/img/in_post/2018/05/20180518204416.png" style="width:550px">
 
 Although the model is much simpler than Deep-ST or ST-ResNet, it still achieved the best performance on BikeNYC and TaxiBJ datasets.
 
-<img src="/img/in_post/2018/05/bikeNYCrmse.png" style="width:450px">
-<img src="/img/in_post/2018/05/TaxiBJRmse.png" style="width:450px">
-<img src="/img/in_post/2018/05/20180518204416.png" style="width:500px">
+To get the best kernel size, we take different combinations for training test. It turns out that 3×3×3 is also the optimal option for transportation data just like other papers have pointed out in some behavior detection tasks.
+
+![](/img/in_post/2018/05/kernel_size_TestRMSE.svg)
+
+The loss and RMSE change with BikeNYC:
+![](/img/in_post/2018/05/meta_comparison_loss.svg)
+![](/img/in_post/2018/05/meta_comparison_RMSE.svg)
+
+The loss and RMSE change with TaxiBJ:
+![](/img/in_post/2018/05/444meta_comparison_loss.svg)
+![](/img/in_post/2018/05/444meta_comparison_RMSE.svg)
+
 
 ## Visualization
-<img src="/img/in_post/2018/05/0.png" style="">
+![](/img/in_post/2018/05/1.svg)
 
 Firstly, I have tried the Matplotlib in Python. The outcomes are good but they are static and not appropriate for the webpage. So I chose d3.js to draw the diagram from scratch. (The style with CSS and SVG tags drive me crazy, it is incompatible with this blog responsive CSS sheet. So I just give up displaying it on this page. Here is the gif version, simple and straightforward.)
 

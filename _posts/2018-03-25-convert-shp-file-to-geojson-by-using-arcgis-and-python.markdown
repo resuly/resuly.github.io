@@ -4,6 +4,10 @@ title: "shp文件转GeoJSON文件"
 subtitle: "Convert shp file to geojson by using Arcgis and Python"
 date: "2018-03-25 15:09:22 +0800"
 header-img: "img/post-bg-gta2.jpg"
+tags:
+  - Python
+  - shp
+  - Arcgis
 ---
 
 
