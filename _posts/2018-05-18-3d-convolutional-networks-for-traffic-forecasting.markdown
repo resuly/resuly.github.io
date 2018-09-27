@@ -74,7 +74,7 @@ The loss and RMSE change with TaxiBJ:
 
 Firstly, I have tried the Matplotlib in Python. The outcomes are good but they are static and not appropriate for the webpage. So I chose d3.js to draw the diagram from scratch. (The style with CSS and SVG tags drive me crazy, it is incompatible with this blog responsive CSS sheet. So I just give up displaying it on this page. Here is the gif version, simple and straightforward.)
 
-<img src="http://7.resuly.me/3dvis.gif">
+<img src="/img/in_post/2018/05/3dvis.gif">
 
 Play around with this diagram:
 <a href="http://resuly.me/projects/3dconvs/index.html" target="_blank">http://resuly.me/projects/3dconvs/</a>
