@@ -4,29 +4,16 @@
 <title>The interactive visualization for the prediction of 3D ConvNets</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<style>
-.axis path, .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-.x.axis path {
-  display: none;
-}
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-</style>
 </head>
 <body>
-  <h1>Interactive Bike-sharing Prediction System</h1>
+  <h1>The interactive visualization for the prediction of 3D ConvNets</h1>
   <div class="heatmap">
     <button id="play-button">Play</button>
     <div id="error">
-      <span>RMSE</span>
-      <h3 id="rmse">0</h3>
+      <span>FLow in RMSE</span>
+      <h3 id="in_rmse">0</h3>
+      <span>FLow out RMSE</span>
+      <h3 id="out_rmse">0</h3>
     </div>
   </div>
   <div class="note">
@@ -43,7 +30,7 @@
 
   <script src="js/d3.min.js"></script>
   <script src="js/function.min.js"></script>
-  <script src="js/demand.min.js"></script>
+  <script src="js/flow.min.js"></script>
 
 </body>
 </html>

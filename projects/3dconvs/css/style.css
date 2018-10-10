@@ -1,38 +1,5 @@
-@font-face {
-    font-family: ColfaxWeb;
-    src: url(font/ColfaxWebRegularAlt.eot);
-    src: url(font/ColfaxWebRegularAlt.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebRegularAlt.woff2) format("woff2"),url(font/ColfaxWebRegularAlt.woff) format("woff");
-    font-weight: 400;
-    font-style: normal
-}
-/*
-@font-face {
-    font-family: ColfaxWeb;
-    src: url(font/ColfaxWebRegularItalic.eot);
-    src: url(font/ColfaxWebRegularItalic.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebRegularItalic.woff2) format("woff2"),url(font/ColfaxWebRegularItalic.woff) format("woff");
-    font-weight: 400;
-    font-style: italic
-}
-
-@font-face {
-    font-family: ColfaxWeb;
-    src: url(font/ColfaxWebMediumAlt.eot);
-    src: url(font/ColfaxWebMediumAlt.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebMediumAlt.woff2) format("woff2"),url(font/ColfaxWebMediumAlt.woff) format("woff");
-    font-weight: 500;
-    font-style: normal
-}
-
-@font-face {
-    font-family: ColfaxWeb;
-    src: url(font/ColfaxWebMediumItalic.eot);
-    src: url(font/ColfaxWebMediumItalic.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebMediumItalic.woff2) format("woff2"),url(font/ColfaxWebMediumItalic.woff) format("woff");
-    font-weight: 500;
-    font-style: italic
-} */
-
 html, body {
-  /* font-family: 'Open Sans', sans-serif; */
-  font-family: ColfaxWeb,'Open Sans',Helvetica,Arial,sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: rgba(0, 0, 0, 0.87);
   /* background-color: rgb(250,250,250); */
 }
@@ -55,9 +22,9 @@ html, body {
 }
 
 h1 {
+  font-weight: normal;
   text-align: center;
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 20px;
   margin-top: 50px;
   margin-bottom: 30px;
   color: #505253;
@@ -67,11 +34,9 @@ h1 {
   width: 1200px;
   margin: 0 auto;
   padding-bottom: 70px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .note p {
-  line-height: 28px;
   font-weight: normal;
   font-size: 14px;
   padding: 0 40px;
@@ -83,7 +48,9 @@ h1 {
 }
 
 .tooltip {
-  width: 85px;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
   padding: 10px;
   top: 197px;
   left: 298px;
@@ -97,6 +64,7 @@ h1 {
 }
 
 .headtitle {
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -176,7 +144,6 @@ h1 {
   font-size: 40px;
   margin: 0 0 25px 0;
   color: #72728d;
-  font-family: 'Open Sans', sans-serif;
 }
 
 svg.clock {
@@ -208,4 +175,8 @@ svg.clock {
 .second.hand {
   stroke: red;
   stroke-width: 4;
+}
+
+.trafficGrids{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA5NiA0Myc+PHBhdGggY2xhc3M9J2NvbG9yJyBkPSdNIDU1LjU4NDY3Myw0My4xNzU2MzIgMzYuNzUyODEsMjIuOTY3MjQzIDAsNDMuMTc1NjMyIDQwLjQyNDAzLDAgNTkuNzExMzUsMjAuMjA4Mzg5IDk2LDAgWicgLz48L3N2Zz4=")
 }
