@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>The interactive visualization for the prediction of 3D ConvNets</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+  display: none;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+</style>
+</head>
+<body>
+  <h1>Traffic Feature Visualization</h1>
+  <div class="note">
+    <p>
+      This page showing the interactive feature visulzation of a parallel CNN model for traffic prediction.
+      The Conv1 and Conv2 are the name of CNN layers. For more information, please refer to this paper: (Link Avaliable after review).
+    </p>
+  </div>
+  <div class="heatmap">
+    <div class="plotly">
+      <iframe width="100%" height="400" frameborder="0" scrolling="no" src="//plot.ly/~resuly/68.embed?showlink=false"></iframe>
+    </div>
+    <div class="plotly">
+      <iframe width="100%" height="400" frameborder="0" scrolling="no" src="//plot.ly/~resuly/70.embed?showlink=false"></iframe>
+    </div>
+
+  </div>
+  <div class="note">
+    <p>
+      Made by Bo, October 2019.
+    </p>
+  </div>
+
+</body>
+</html>

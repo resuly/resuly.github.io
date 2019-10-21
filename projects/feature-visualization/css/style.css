@@ -1,0 +1,215 @@
+@font-face {
+    font-family: ColfaxWeb;
+    src: url(font/ColfaxWebRegularAlt.eot);
+    src: url(font/ColfaxWebRegularAlt.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebRegularAlt.woff2) format("woff2"),url(font/ColfaxWebRegularAlt.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+/*
+@font-face {
+    font-family: ColfaxWeb;
+    src: url(font/ColfaxWebRegularItalic.eot);
+    src: url(font/ColfaxWebRegularItalic.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebRegularItalic.woff2) format("woff2"),url(font/ColfaxWebRegularItalic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: ColfaxWeb;
+    src: url(font/ColfaxWebMediumAlt.eot);
+    src: url(font/ColfaxWebMediumAlt.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebMediumAlt.woff2) format("woff2"),url(font/ColfaxWebMediumAlt.woff) format("woff");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: ColfaxWeb;
+    src: url(font/ColfaxWebMediumItalic.eot);
+    src: url(font/ColfaxWebMediumItalic.eot?#iefix) format("embedded-opentype"),url(font/ColfaxWebMediumItalic.woff2) format("woff2"),url(font/ColfaxWebMediumItalic.woff) format("woff");
+    font-weight: 500;
+    font-style: italic
+} */
+
+html, body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: ColfaxWeb,'Open Sans',Helvetica,Arial,sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  /* background-color: rgb(250,250,250); */
+}
+
+.axis line, .axis path {
+  display: none;
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 12px;
+  fill: #878796
+}
+
+.heatmap {
+  position: relative;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #505253;
+}
+
+.note {
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.note p {
+  line-height: 28px;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0 40px;
+}
+
+.note p a {
+  text-decoration: none;
+  color: #2196F3
+}
+
+.tooltip {
+  width: 85px;
+  padding: 10px;
+  top: 197px;
+  left: 298px;
+  background: #fff;
+  opacity: 1;
+  position: absolute;
+  visibility: hidden;
+  box-shadow: #9E9E9E 0px 0px 6px;
+  color: #444;
+  text-align: center;
+}
+
+.headtitle {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.in {
+  fill: #26609e;
+}
+
+.out {
+  fill: #1f914b;
+}
+
+.ticks {
+  font-size: 12px;
+  fill: #878796;
+}
+
+.track, .track-inset, .track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #31343d;
+  stroke-opacity: 0.5;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #fff;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: -webkit-grab;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #585e72;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+#play-button {
+  position: absolute;
+  background: #fff;
+  padding-right: 26px;
+  border-radius: 3px;
+  color: #585e72;
+  margin: 0;
+  padding: 0 12px;
+  width: 60px;
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid #585e72;
+}
+
+#play-button:hover {
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+#error {
+  position: absolute;
+  text-align: center;
+}
+
+#error span {
+  font-size: 12px;
+  color: #878796;
+}
+
+#error h3 {
+  font-size: 40px;
+  margin: 0 0 25px 0;
+  color: #72728d;
+  font-family: 'Open Sans', sans-serif;
+}
+
+svg.clock {
+  stroke-linecap: round;
+}
+
+.face {
+  stroke: #aac;
+  stroke-width: 6;
+}
+
+.hourtick.face {}
+
+.minutetick.face {
+  stroke-width: 2;
+}
+
+.hand {
+  stroke: #336;
+  stroke-width: 8;
+}
+
+.hour.hand {
+  stroke-width: 12;
+}
+
+.minute.hand {}
+
+.second.hand {
+  stroke: red;
+  stroke-width: 4;
+}
+
+.plotly{
+  margin-bottom: 40px
+}
