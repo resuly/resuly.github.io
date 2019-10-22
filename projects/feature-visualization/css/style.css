@@ -52,6 +52,10 @@ html, body {
 .heatmap {
   position: relative;
   margin: 0 auto;
+  text-align: center;
+}
+.heatmap video{
+  width: initial
 }
 
 h1 {
@@ -63,6 +67,22 @@ h1 {
   color: #505253;
 }
 
+h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  color: #505253;
+}
+
+hr{
+    width: 800px;
+    border-top: 1px dashed #e1e1e1;
+}
+.video-container{
+  text-align: center;
+}
 .note {
   width: 900px;
   margin: 0 auto;

@@ -9,14 +9,43 @@
   <h1>Traffic Feature Visualization</h1>
   <div class="note">
     <p>
-      This page showing the interactive feature visulzation of a parallel CNN model for traffic prediction.
-      The figures below canbe en
-      The Conv1 and Conv2 are the name of CNN layers. For more information, please refer to this paper: (Link Avaliable after review).
+      This page showing the interactive feature visualization of a parallel CNN model for traffic prediction.
+      Conv1 and Conv2 are the names of CNN layers.
+      For more information, please refer to this paper: (Link Available after review).
     </p>
   </div>
 
-  <div class="heatmap">
+  <h2>CNN Layer - Conv1</h2>
+  <hr>
+  <div class="note">
+    <div class="video-container">
+      <video controls autoplay loop>
+        <source src="video/3dsteps-conv1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p>
+      The video above shows the optimization procedure of the Conv1 layer.
+      We use the result from step 300 to create an interactive plot below.
+      Please drag and scroll to see more details.
+    </p>
     <div class="plotly" id="mconv1"></div>
+  </div>
+
+  <h2 style="margin-top:30px">CNN Layer - Conv2</h2>
+  <hr>
+  <div class="note">
+    <div class="video-container">
+      <video controls autoplay loop>
+        <source src="video/3dsteps-conv2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p>
+      The video above shows the optimization procedure of the Conv2 layer.
+      We use the result from step 300 to create an interactive plot below.
+      Please drag and scroll to see more details.
+    </p>
     <div class="plotly" id="mconv2"></div>
   </div>
 
