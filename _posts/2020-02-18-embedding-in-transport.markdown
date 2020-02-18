@@ -13,8 +13,6 @@ tags:
 
 Discrete data are commonly used in forecasting models for better accuracy. Compare to the continuous variables like traffic flow or speed, the discrete variables (weather, POI, holidays) are always used as external information concatenated with the hidden output and pass through a linear layer.
 
-
-
 ![/img/in_post/2020/embedding/Artboard_1.jpg](/img/in_post/2020/embedding/Artboard_1.jpg)
 
 Some example of using external discrete data in traffic neural network models
@@ -32,7 +30,7 @@ Every single city is encoded by a vector using 1 or 0. However, there are two de
 1. The vector length impacted by the number of categories. For example, if we have 2,000 cities (V=2000), then the vector length would be 2,000.
 2. Since the information represented by 1 or 0 only, it's hard to see the relationship between these categories.
 
-## Entity embedding
+## Entity Embedding
 
 An embedding is a mapping from discrete objects, such as words, to vectors of real numbers. For example, a 300-dimensional embedding for English words could include:
 
@@ -55,7 +53,7 @@ The basic idea is:
 
 Traffic FLow: Two-years station based bike-sharing data in Suzhou, China
 
-Discrete variables (Two-years):  
+Discrete Variables (Two-years):  
 
  - Time related variables (Year, Month, Day, Hour, Day of the week)
 
@@ -91,13 +89,13 @@ Visualization of station ID of 1,786 stations
 
 ![/img/in_post/2020/embedding/Untitled%205.png](/img/in_post/2020/embedding/Untitled%205.png)
 
-Part of the ID relation with names. See the full picture here to find more intersting relations: [http://resuly.me/projects/embedding/](http://resuly.me/projects/embedding/)
+Part of the ID relation with names. See the full picture here to find more interesting relations: [http://resuly.me/projects/embedding/](http://resuly.me/projects/embedding/)
 
 ![/img/in_post/2020/embedding/hour.svg](/img/in_post/2020/embedding/hour.svg)
 
 Visualization of hours
 
-**Conclustion**
+**Conclusion**
 
 The results show that some of these discrete variables can be arranged in a reasonable way after being represented by trained embedding vectors, which also provide an important reference role for transport planning and traffic management. However, some variables like position, holidays didn't show obvious aggregation. Many factors may cause this phenomenon, which still needs further study.
 
@@ -105,7 +103,7 @@ The results show that some of these discrete variables can be arranged in a reas
 
 The code can be found at [https://github.com/resuly/embedding](https://github.com/resuly/embedding)
 
-If you think this is helpfu to your reserach, please condider citing our work:
+If you think this is helpful to your research, please consider citing our work:
 
     @article{wang2019revealing,
       title={Revealing the hidden features in traffic prediction via entity embedding},
