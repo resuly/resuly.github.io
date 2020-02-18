@@ -14,8 +14,7 @@ tags:
 Discrete data are commonly used in forecasting models for better accuracy. Compare to the continuous variables like traffic flow or speed, the discrete variables (weather, POI, holidays) are always used as external information concatenated with the hidden output and pass through a linear layer.
 
 ![/img/in_post/2020/embedding/Artboard_1.jpg](/img/in_post/2020/embedding/Artboard_1.jpg)
-
-Some example of using external discrete data in traffic neural network models
+<p class="caption">Some example of using external discrete data in traffic neural network models.</p>
 
 ## **One-hot encoding**
 
