@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+docs
+https://github.com/d3/d3-contour#contourDensity
+http://d3-annotation.susielu.com/#api
+-->
+
+<style>
+.domain {
+  display: none;
+}
+</style>
+
+<svg width="4000" height="2450"></svg>
+<script src="d3.v4.min.js"></script>
+<script src="d3-contour.v1.min.js"></script>
+<script src="d3-annotation.min.js"></script>
+<script>
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height"),
+    margin = {top: 90, right: 80, bottom: 80, left: 100};
+
+var x = d3.scaleLinear()
+    .rangeRound([margin.left, width - margin.right]);
+
+var y = d3.scaleLinear()
+    .rangeRound([height - margin.bottom, margin.top]);
+
+function create(filename='', config){
+  d3.csv("data1-1/"+filename, function(d) {
+    d.x = +parseFloat(d.x).toFixed(2);
+    d.y = +parseFloat(d.y).toFixed(2);
+    d.tradenum = +parseInt(d.tradenum);
+    return d;
+  }, function(error, data) {
+    if (error) throw error;
+
+    // circle size
+    trade_max = d3.max(data.map(function(d){return d.tradenum;}));
+    trade_min = d3.min(data.map(function(d){return d.tradenum;}));
+    var CircleScale = d3.scaleLinear()
+      .domain([trade_min, trade_max]).range([3, 15]);
+
+    x.domain(d3.extent(data, function(d) { return d.x; })).nice();
+    y.domain(d3.extent(data, function(d) { return d.y; })).nice();
+
+    svg.insert("g", "g")
+        .attr("fill", config.cfill)
+        .attr("fill-opacity", 0.4)
+        .attr("stroke", config.cstroke)
+        .attr("stroke-dasharray", ("2,2"))
+      .selectAll("path")
+      .data(d3.contourDensity()
+          .x(function(d) { return x(d.x); })
+          .y(function(d) { return y(d.y); })
+          // .cellSize([width - 20, height - 200])
+          .size([width, height])
+          .thresholds(config.thresholds)
+          .bandwidth(config.bandwidth)
+        (data))
+      .enter().append("path")
+        .attr("d", d3.geoPath());
+
+    svg.append("g")
+        .attr("stroke", "white")
+      .selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d) { return x(d.x); })
+        .attr("cy", function(d) { return y(d.y); })
+        .attr("fill", config.cstroke)
+        .attr("r",function(d) { return CircleScale(d.tradenum); } );
+
+    svg.append("g")
+      .selectAll("text")
+      .data(data)
+      .enter().append("text")
+        .attr("x", function(d) { return x(d.x); })
+        .attr("y", function(d) { return y(d.y+0.5); })
+        .text( function (d) { return d.name; })
+        .attr("text-anchor", "middle")
+        .style("font-size", "9px");
+    });
+}
+
+create(filename='id_0.csv',
+  config={cstroke:"#8ea0f9",
+          cfill:"#c7d0fd",
+          thresholds:2,
+          bandwidth:0});
+
+create(filename='id_1.csv',
+  config={cstroke:"#fc6eb1",
+          cfill:"#ffc9e2",
+          thresholds:2,
+          bandwidth:0});
+
+create(filename='id_2.csv',
+  config={cstroke:"#a3d6e8",
+          cfill:"#cef0fc",
+          thresholds:2,
+          bandwidth:0});
+
+create(filename='id_3.csv',
+  config={cstroke:"#aab7be",
+          cfill:"#d6effc",
+          thresholds:2,
+          bandwidth:0});
+/*axis x & y*/
+/*
+  svg.append("g")
+      .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+      .call(d3.axisBottom(x))
+    .select(".tick:last-of-type text")
+    .select(function() { return this.parentNode.appendChild(this.cloneNode()); })
+      .attr("y", -3)
+      .attr("dy", null)
+      .attr("font-weight", "bold")
+      .text("Idle (min.)");
+
+  svg.append("g")
+      .attr("transform", "translate(" + margin.left + ",0)")
+      .call(d3.axisLeft(y))
+    .select(".tick:last-of-type text")
+    .select(function() { return this.parentNode.appendChild(this.cloneNode()); })
+      .attr("x", 3)
+      .attr("text-anchor", "start")
+      .attr("font-weight", "bold")
+      .text("Erupting (min.)");
+*/
+  // annotations
+
+  const annotations = [
+    {
+      note: { label: "Cold & hot days."},
+      x: 140, y: 280,
+      dx: 100, dy: 100,
+      type: d3.annotationCalloutElbow,
+      connector: { end: "dot" }
+    },
+    // three pointers
+    // {
+    //   note: { label: "Comfortable days."},
+    //   x: 580, y: 200,
+    //   dx: 80, dy: 80,
+    //   type: d3.annotationLabel,
+    //   connector: { end: "dot" }
+    // },
+    // {
+    //   x: 620, y: 410, dx: 25, dy: -70,
+    //   type: d3.annotationLabel,
+    //   connector: { end: "dot"}
+    // },
+    // {
+    //   x: 850, y: 320, dx: -160, dy: -10,
+    //   type: d3.annotationLabel,
+    //   connector: { end: "dot"}
+    // }
+  ];
+  makeAnnotations = d3.annotation().annotations(annotations);
+  // svg.append("g")
+  //   .attr("class", "annotation-group")
+  //   .call(makeAnnotations);
+
+</script>
