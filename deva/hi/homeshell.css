@@ -1,0 +1,31 @@
+@charset "utf-8";
+*:focus {
+  outline: none;
+}
+body {
+  background: #000000;
+}
+.homeshell-input {
+  display: inline;
+  color: #00FF00;
+}
+
+.homeshell-line {
+  color: #00FF00;
+}
+
+pre {
+  margin: 0 0;
+  padding: 0 0;
+}
+a {
+  color:#0d8c21;
+  text-decoration:none;
+}
+a:hover {
+  color:red;
+  text-decoration:underline;
+}
+a:visited {
+  color: #0000FF;
+}

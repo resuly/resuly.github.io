@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Love ~</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  	<link rel="shortcut icon" href="favicon.ico">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+  <!-- We are both Young,Encountered very kind of you, -->
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* I don't think I should wait, </span><br />
+				<span class="space"/><span class="comments">* I think I should speak now.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+              	<br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Resuly"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Deva"</span>);<br />
+				<br />
+              	5, Oct, 2012, encountered you.<br />
+              	<br />
+              	We have been chatting everyday since then. <br />
+              	<br />
+              	You always give me a lot of positive energy.<br />
+              	<br />
+              	Chatting with you there is a special feeling. <br />
+              	<br />
+              	And then , some magical things happened.<br />
+              	<br />
+              	→_→ <br />
+              	<br />
+              	My affection for you has been gradually generated. <br />
+              	<br />
+              	I wanna be with you now. <br />
+              	<br />
+              	All I can say is I was enchanted to meet you.<br />
+              	<br />
+				Anyway, Thanks for Young. <br />
+              	<br />
+              	Love you.<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Deva, We met for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						I was enchanted to meet you.<br/>
+						<div class="signature">- resuly</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+          
+          <audio controls="controls" autoplay="autoplay" loop="loop">
+  			<source src="sound/laputa.mp3" type="audio/mpeg" />
+			Your browser does not support the audio element.
+		  </audio>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2012, 3, 23);
+		together.setHours(6);
+		together.setMinutes(10);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "❤  您的浏览器不支持HTML5技术<br/>推荐使用 Chrome 浏览器 喵~ ＞▽＜ "; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>

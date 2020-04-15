@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Hi Deva</title>
+  <meta charset='utf-8'>
+  <link rel="stylesheet" href="homeshell.css" type="text/css" media="screen" title="no title" charset="utf-8" />  
+  <script src="jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="homeshell.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("#shell").homeshell();
+    var hs = HomeShell.find("#shell");
+    hs.addCommand("love", function(){
+      window.open("../Love/you/");
+    });
+    hs.addCommand("lovemap", function(){
+      window.open("../Love/map/");
+    });
+    hs.addCommand("birthday", function(){
+      window.open("../birthday/");
+    });
+    hs.addCommand("blog", function(){
+      window.open("http://resuly.diandian.com/");
+    });
+    hs.addCommand("weibo", function(homeshell, args){
+      window.open("http://weibo.com/resuly/");
+    });
+    hs.addCommand("email", function(homeshell, args){
+      homeshell.output('<a href="resuly@163.com">resuly@163.com</a>');
+    });
+    hs.addCommand("echo", function(homeshell, args){
+      homeshell.output(args.join(' '));
+    });
+    hs.addCommand("who", function(homeshell, args){
+      homeshell.output('This is the Resuly, so hold onto your teenage daughter.');
+      homeshell.output('Please input \'email\' contract to me.');
+    });
+
+    //hs.addCommand("friends", function(homeshell, args){
+    //  homeshell.output('<a href="http://www.zhishou.org/">执手 - 气味大总裁</a>');
+    //});
+  });
+  </script>
+</head>
+<body>
+  <div id="shell"></div>
+</body>
+</html>
