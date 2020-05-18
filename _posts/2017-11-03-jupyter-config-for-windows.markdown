@@ -17,9 +17,11 @@ Anaconda装完以后，Jupyter Notebook给python开发效率带来了几何级�
 
 {% highlight python %}
 # install jupyterthemes
+
 pip install jupyterthemes
 
 # 配置默认主题
+
 jt -r
 {% endhighlight %}
 
