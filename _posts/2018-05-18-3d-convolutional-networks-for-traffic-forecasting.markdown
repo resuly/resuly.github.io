@@ -77,7 +77,11 @@ Firstly, I have tried the Matplotlib in Python. The outcomes are good but they a
 <img src="/img/in_post/2018/05/3dvis.gif">
 
 Play around with this diagram:
-<a href="http://resuly.me/projects/3DResNet/index.html" target="_blank">http://resuly.me/projects/3DResNet/index.html</a>
+<a href="http://resuly.me/projects/3DResNet/flow.html" target="_blank">http://resuly.me/projects/3DResNet/flow.html</a>
+
+## Codes
+<a href="https://github.com/resuly/Traffic-3DResnets" target="_blank">https://github.com/resuly/Traffic-3DResnets</a>
+
 
 ## References
 Zhang, J., Zheng, Y., Qi, D., Li, R., & Yi, X. (2016, October). DNN-based prediction model for spatio-temporal data. In Proceedings of the 24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (p. 92). ACM.
