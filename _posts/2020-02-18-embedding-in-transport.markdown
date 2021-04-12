@@ -97,7 +97,7 @@ The results show that some of these discrete variables can be arranged in a reas
 
 ## Codes
 
-The code can be found at <a href="https://github.com/resuly/embedding" target="_blank">https://github.com/resuly/embedding</a>.
+The code can be found at <a href="https://github.com/resuly/Traffic-Embedding" target="_blank">https://github.com/resuly/Traffic-Embedding</a>.
 
 If you think this is helpful to your research, please consider citing our work:
 ```text
