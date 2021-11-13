@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "3D Convolutional Networks for Traffic Forecasting"
-date: "2018-05-18 17:05:13 +0800"
+date: "2019-12-18 17:05:13 +0800"
 header-img: "img/post-bg-fantasy.jpg"
 tags:
   - 3D CNN

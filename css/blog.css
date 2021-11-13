@@ -140,7 +140,7 @@ p {
   font-size: 1.6rem;
   line-height: 2.8rem;
   margin-top: 2.2rem;
-  color: #333;
+  color: #222;
 }
 li {
   margin-top: 0.5rem;
@@ -248,7 +248,7 @@ pre code {
 .post-container h5 {
   font-size: 19px;
   font-weight: 600;
-  color: gray;
+  color: #222222;
 }
 .post-container h5 + p {
   margin-top: 5px;

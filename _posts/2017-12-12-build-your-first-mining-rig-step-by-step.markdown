@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "从零开始组建 1080TI 矿机"
-date: "2017-12-20 17:41:30 +0800"
+date: "2016-12-20 17:41:30 +0800"
 author: "resuly"
 header-img: "img/post-bg-gtx.jpg"
 catalog: true
