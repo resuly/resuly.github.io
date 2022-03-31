@@ -28,7 +28,7 @@ header-img: "img/post-bg-24.jpg"
     <h5>文章</h5>
     <ul class="publication">
         <li>
-            Wang, B., Mohajerpoor, R., Cai, C., Vu, H. L., & Kim, I. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet. 
+            Wang, B., Mohajerpoor, R., Cai, C., Kim, I. & Vu H. L. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet.
             URL: <a href="http://arxiv.org/abs/2111.05990">http://arxiv.org/abs/2111.05990</a>
             (Accepted & invited to present at Traffic4cast Competition, NeurIPS 2021)
         </li>
@@ -80,9 +80,12 @@ header-img: "img/post-bg-24.jpg"
     </ul>
     <h5>审稿人</h5>
     <ul class="publication">
+        <li>Transactions on Intelligent Transportation Systems</li>
         <li>Transportation Research Board (TRB) Annual Meeting</li>
+        <li>Journal of Advanced Transportation</li>
         <li>IET Intelligent Transport Systems</li>
-        <li>IEEE Transactions on Intelligent Transportation Systems</li>
+        <li>Transportation Letters</li>
+        <li>Physica A: Statistical Mechanics and Its Applications</li>
     </ul>
 </div>
 
@@ -100,7 +103,7 @@ header-img: "img/post-bg-24.jpg"
     <h5>Publication</h5>
     <ul class="publication">
         <li>
-            Wang, B., Mohajerpoor, R., Cai, C., Vu, H. L., & Kim, I. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet. 
+            Wang, B., Mohajerpoor, R., Cai, C., Kim, I. & Vu H. L. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet.
             URL: <a href="http://arxiv.org/abs/2111.05990" target="_blank">http://arxiv.org/abs/2111.05990</a> 
             (Presented at Traffic4cast Competition, NeurIPS 2021) | (<a href="https://github.com/resuly/Traffic4Cast-2021" target="_blank">Github</a>) | (<a href="https://youtu.be/YHW70ZAO7b0" target="_blank">Video</a>)
         </li>
@@ -156,9 +159,12 @@ header-img: "img/post-bg-24.jpg"
 
     <h5>Reviewer</h5>
     <ul class="publication">
+        <li>Transactions on Intelligent Transportation Systems</li>
         <li>Transportation Research Board (TRB) Annual Meeting</li>
+        <li>Journal of Advanced Transportation</li>
         <li>IET Intelligent Transport Systems</li>
-        <li>IEEE Transactions on Intelligent Transportation Systems</li>
+        <li>Transportation Letters</li>
+        <li>Physica A: Statistical Mechanics and Its Applications</li>
     </ul>
 </div>
 
@@ -200,29 +206,3 @@ header-img: "img/post-bg-24.jpg"
     // init
     _render();
 </script>
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
-    </div>
-</div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
