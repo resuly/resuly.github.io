@@ -65,20 +65,20 @@ chrome-tab-theme-color: "#000000"
 service-worker: true
 
 # Friends
-friends: [
-    {
-        title: "TUPA",
-        href: "http://inhi.kim/"
-    },
-    {
-        title: "Aaron",
-        href: "http://aerolith.ink/"
-    },
-    {
-        title: "Xinyuan",
-        href: "https://chnxyu.github.io/"
-    }
-]
+# friends: [
+#     {
+#         title: "TUPA",
+#         href: "http://inhi.kim/"
+#     },
+#     {
+#         title: "Aaron",
+#         href: "http://aerolith.ink/"
+#     },
+#     {
+#         title: "Xinyuan",
+#         href: "https://chnxyu.github.io/"
+#     }
+# ]
 
 atom:
   buildCommand:
