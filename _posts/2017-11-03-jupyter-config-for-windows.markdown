@@ -179,6 +179,16 @@ pip install jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
 {% endhighlight %}
 
+近期 jupyter notebook 更新，默认使用 jupyterlab 中的组件导致一些 js 文件无法加载，可以通过降级来解决这个问题：
+{% highlight cmd %}
+pip install notebook==6.1.5
+{% endhighlight %}
+
+之后还需安装 ipywidgets
+{% highlight cmd %}
+pip install ipywidgets
+{% endhighlight %}
+
 重启 jupyter server，就可以看见插件管理的Tab了。如果看不见，请检查自己电脑上是不是有多个python环境，请把插件安装到和jupyter一致的python环境中。
 ![](/img/in_post/2017/11/20171107202611.png)
 
@@ -198,5 +208,12 @@ pip install yapf
 ![](/img/in_post/2017/11/formatting.gif)
 细心的读者可能会发现，其实图标用的是Font Awesome字体，在配置中修改icon的样式就可以修改对应的图标了，比如把锤子变成对号，把legal改成check就可以：fa-legal -> fa-check。访问[http://fontawesome.io/icons/](http://fontawesome.io/icons/)，查看所有可以用的图标。
 ![](/img/in_post/2017/11/iconsetting.jpg)
+
+### 烦人的 comment indent 问题
+默认的 comment 会在当前一行的开始添加一个 #，不支持和代码一起缩进，和绝大多数的IDE都不一样，非常烦人和反人类。这个问题的讨论可以查看一下链接：
+
+[https://github.com/jupyter/notebook/issues/954](https://github.com/jupyter/notebook/issues/954)
+
+解决方式是开启 Comment/Uncomment Hotkey 这个插件，注意还是没法覆盖默认的 Crtl + / 按键，建议改成 Alt + / 来进行可以缩进的注释。
 
 其实还有很多其他功能可以使用，希望大家都能够利用Jupyter Notebook提高自己的开发效率。欢迎留言，一起探索交流。
