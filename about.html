@@ -4,184 +4,18 @@ title: "About"
 description: "Hi, this is Bo Wang."
 header-img: "img/post-bg-24.jpg"
 ---
-<style type="text/css">
+<style>
     .links{}
     .links .item{display: inline-block; margin-right: 8px;}
     .links .item i{}
+
+    ul{
+        padding-inline-start: 16px;
+    }
+    .publication li{
+        font-family: Arial, sans-serif
+    }
 </style>
-<!-- Language Selector -->
-<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="1" selected> 英文 English </option>
-    <option value="0"> 中文 Chinese </option>
-</select>
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-    <!--copied from markdown -->
-    <!-- <blockquote>
-        <p>Yesterday, you said tomorrow.</p>
-    </blockquote> -->
-    <h5>About Me</h5>
-    <p>一个关注智能交通、Web 开发、机器学习的准极客</p>
-    <p>一些作品和项目，见本博客的 <a href="/portfolio">Portfolio</a> 与 <a href="http://github.com/resuly" target="_blank">Github</a>
-    <h5>联系</h5>
-    <p>
-      Email: bo.wang at unimelb.edu.au <br>
-    </p>
-    <h5>文章</h5>
-    <ul class="publication">
-        <li>
-            Eichenberger, C., Neun, M., …, <b>Wang, B.</b>, …, et al. (2022). Traffic4cast at NeurIPS 2021 – Temporal and Spatial Few-Shot Transfer Learning in Gridded Geo-Spatial Processes. <i>NeurIPS 2021 Competition and Demonstration Track, PMLR</i>. (In Press)
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://arxiv.org/abs/2203.17070" target="_blank">Paper</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <b>Wang, B.</b>, Mohajerpoor, R., Cai, C., Kim, I. & Vu H. L. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet. (Presented at <i>Traffic4cast Competition, NeurIPS 2021</i>) 
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="http://arxiv.org/abs/2111.05990" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/resuly/Traffic4Cast-2021" target="_blank">Github</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-video"></i>
-                    <a href="https://youtu.be/K7SkNMeXL0E?t=7040" target="_blank">Video</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <b>Wang, B.</b>, Vu, H. L., Kim, I., & Cai, C. (2021). Short-term traffic flow prediction in bike-sharing networks.
-            <i>Journal of Intelligent Transportation Systems, 1-18</i>.
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://doi.org/10.1080/15472450.2021.1904921" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/resuly/Traffic-3DResnets" target="_blank">Github</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-video"></i>
-                    <a href="https://bit.ly/3hxl1AS" target="_blank">Video</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <a href="https://resuly.me/projects/3DResNet/flow.html" target="_blank">Demo</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            B Wang, H Vu & I Kim. (2020).
-            Short-Term Traffic Prediction Using A Spatial-Temporal CNN Model With Transfer Learning.
-            <i>Transportation Research Board 99th Annual Meeting, Washington, D.C., United States</i>.
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://www.monash.edu/__data/assets/pdf_file/0011/2047286/TRR-S-19-05065.pdf" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-image"></i>
-                    <a href="/projects/files/99thTRBPoster-Bo.pdf" target="_blank">Poster</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <a href="https://resuly.me/projects/feature-visualization/" target="_blank">Demo</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <b>Wang, B.</b>, Shaaban, K., & Kim, I. (2020).
-            Revealing the hidden features in traffic prediction via entity embedding. 
-            <i>Personal and Ubiquitous Computing, 25(1), 21-31</i>.
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="http://link.springer.com/article/10.1007/s00779-019-01333-x" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-code"></i>
-                    <a href="/2020/02/18/embedding-in-transport/" target="_blank">Tutorial</a>
-                </div>
-                <div class="item">
-                    <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/resuly/Traffic-Embedding" target="_blank">Github</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <a href="https://resuly.me/projects/embedding/" target="_blank">Demo</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <b>Wang, B.</b>, Shaaban, K., & Kim, I. (2019). 
-            Reveal the hidden layer via entity embedding in traffic prediction. 
-            Paper presented at <i>10th International Conference on Ambient Systems, Networks and Technologies (ANT), Leuven, Belgium</i>.
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://doi.org/10.1016/j.procs.2019.04.025" target="_blank">Paper</a>
-                </div>
-            </div>
-        </li>
-        
-        <li>
-            <b>Wang, B.</b>, & Kim, I. (2018). 
-            Short-term prediction for bike-sharing service using machine learning. 
-            Paper presented at the <i>International Symposium of Transport Simulation (ISTS’18) and the International Workshop on Traffic Data Collection and its Standardization (IWTDCS’18), Matsuyama Japan</i>.
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://doi.org/10.1016/j.trpro.2018.11.029" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-code"></i>
-                    <a href="/2017/09/14/case-study-shortterm-traffic-forecasting-for-suzhou-bike-sharing-sysytem/" target="_blank">Tutorial</a>
-                </div>
-            </div>
-
-        </li>
-        <li>
-            <b>Wang, B.</b>, Hua, L., & Kim, I. (2018). 
-            Social Media Application for Illegal Parking Problem. 
-            Paper presented at the <i>CICTP 2017: Transportation Reform and Change—Equity, Inclusiveness, Sharing, and Innovation, Shanghai, China</i>. 
-            <div class="links">
-                <div class="item">
-                    <i class="fa-solid fa-book"></i>
-                    <a href="https://doi.org/10.1061/9780784480915.006" target="_blank">Paper</a>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <a href="http://inhi.kim/archives/212" target="_blank">Demo</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            Li, Y., Hu, Q., & <b>Wang, B.</b> (2016). Research on Positioning Accuracy with Kalman Filter for Road Maintenance Equipment. <i>Technology Innovation and Application, 36, 46-48</i>.
-        </li>
-        
-    </ul>
-    <h5>审稿人</h5>
-    <ul class="publication">
-        <li>Transactions on Intelligent Transportation Systems</li>
-        <li>Transportation Research Board (TRB) Annual Meeting</li>
-        <li>Journal of Advanced Transportation</li>
-        <li>IET Intelligent Transport Systems</li>
-        <li>Transportation Letters</li>
-        <li>Physica A: Statistical Mechanics and Its Applications</li>
-        <li>International Journal of Information Management Data Insights</li>
-    </ul>
-</div>
 
 <!-- English Version -->
 <div class="en post-container">
@@ -197,9 +31,28 @@ header-img: "img/post-bg-24.jpg"
     </p>
 
     <h5>Publication</h5>
+
     <ul class="publication">
         <li>
-            Eichenberger, C., Neun, M., …, <b>Wang, B.</b>, …, et al. (2022). Traffic4cast at NeurIPS 2021 – Temporal and Spatial Few-Shot Transfer Learning in Gridded Geo-Spatial Processes. <i>NeurIPS 2021 Competition and Demonstration Track, PMLR</i>.
+            <b>Wang, B.</b>, Vu, H. L., Kim, I., & Cai, C. (2023). Distributional Prediction of Short-term Traffic using Neural Networks.
+            <i>Engineering Applications of Artificial Intelligence</i> (Accepted).
+        </li>
+        <li>
+            <b>Wang, B.</b>, Qin, A. K., Shafiei, S., Dia, H., Mihaita, A. S., & Grzybowska, H. (2023).
+            Training Physics-Informed Neural Networks via Multi-Task Optimization for Traffic Density Prediction.
+            In 2023 <i>International Joint Conference on Neural Networks (IJCNN)</i> (pp. 1-7). IEEE.
+
+            <div class="links">
+                <div class="item">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10191301" target="_blank">Paper</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            Eichenberger, C., Neun, M., …, <b>Wang, B.</b>, …, et al. (2022).
+            Traffic4cast at NeurIPS 2021 – Temporal and Spatial Few-Shot Transfer Learning in Gridded Geo-Spatial Processes.
+            <i>NeurIPS 2021 Competition and Demonstration Track, PMLR</i>.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -212,7 +65,9 @@ header-img: "img/post-bg-24.jpg"
             </div>
         </li>
         <li>
-            <b>Wang, B.</b>, Mohajerpoor, R., Cai, C., Kim, I. & Vu H. L. (2021). Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet. Presented at <i>Traffic4cast Competition, NeurIPS 2021</i>.
+            <b>Wang, B.</b>, Mohajerpoor, R., Cai, C., Kim, I. & Vu H. L. (2021).
+            Traffic4cast - Large-scale Traffic Prediction using 3DResNet and Sparse-UNet.
+            Presented at <i>Traffic4cast Competition, NeurIPS 2021</i>.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -230,7 +85,7 @@ header-img: "img/post-bg-24.jpg"
         </li>
         <li>
             <b>Wang, B.</b>, Vu, H. L., Kim, I., & Cai, C. (2021). Short-term traffic flow prediction in bike-sharing networks.
-            <i>Journal of Intelligent Transportation Systems, 1-18</i>.
+            <i>Journal of Intelligent Transportation Systems</i>, 1-18.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -253,7 +108,7 @@ header-img: "img/post-bg-24.jpg"
         <li>
             B Wang, H Vu & I Kim. (2020).
             Short-Term Traffic Prediction Using A Spatial-Temporal CNN Model With Transfer Learning.
-            <i>Transportation Research Board 99th Annual Meeting, Washington, D.C., United States</i>.
+            <i>Transportation Research Board 99th Annual Meeting</i>, Washington, D.C., United States.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -273,7 +128,7 @@ header-img: "img/post-bg-24.jpg"
         <li>
             <b>Wang, B.</b>, Shaaban, K., & Kim, I. (2020).
             Revealing the hidden features in traffic prediction via entity embedding. 
-            <i>Personal and Ubiquitous Computing, 25(1), 21-31</i>.
+            <i>Personal and Ubiquitous Computing</i>, 25(1), 21-31.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -297,7 +152,7 @@ header-img: "img/post-bg-24.jpg"
         <li>
             <b>Wang, B.</b>, Shaaban, K., & Kim, I. (2019). 
             Reveal the hidden layer via entity embedding in traffic prediction. 
-            Paper presented at <i>10th International Conference on Ambient Systems, Networks and Technologies (ANT), Leuven, Belgium</i>.
+            Paper presented at <i>10th International Conference on Ambient Systems, Networks and Technologies (ANT)</i>, Leuven, Belgium.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -309,7 +164,7 @@ header-img: "img/post-bg-24.jpg"
         <li>
             <b>Wang, B.</b>, & Kim, I. (2018). 
             Short-term prediction for bike-sharing service using machine learning. 
-            Paper presented at the <i>International Symposium of Transport Simulation (ISTS’18) and the International Workshop on Traffic Data Collection and its Standardization (IWTDCS’18), Matsuyama Japan</i>.
+            Paper presented at the <i>International Symposium of Transport Simulation (ISTS’18) and the International Workshop on Traffic Data Collection and its Standardization (IWTDCS’18)</i>, Matsuyama Japan.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -325,7 +180,7 @@ header-img: "img/post-bg-24.jpg"
         <li>
             <b>Wang, B.</b>, Hua, L., & Kim, I. (2018). 
             Social Media Application for Illegal Parking Problem. 
-            Paper presented at the <i>CICTP 2017: Transportation Reform and Change—Equity, Inclusiveness, Sharing, and Innovation, Shanghai, China</i>. 
+            Paper presented at the <i>CICTP 2017: Transportation Reform and Change—Equity, Inclusiveness, Sharing, and Innovation</i>, Shanghai, China.
             <div class="links">
                 <div class="item">
                     <i class="fa-solid fa-book"></i>
@@ -338,58 +193,21 @@ header-img: "img/post-bg-24.jpg"
             </div>
         </li>
         <li>
-            Li, Y., Hu, Q., & <b>Wang, B.</b> (2016). Research on Positioning Accuracy with Kalman Filter for Road Maintenance Equipment. <i>Technology Innovation and Application, 36, 46-48</i>.
+            Li, Y., Hu, Q., & <b>Wang, B.</b> (2016).
+            Research on Positioning Accuracy with Kalman Filter for Road Maintenance Equipment. <i>Technology Innovation and Application</i>, 36, 46-48.
         </li>
         
     </ul>
 
     <h5>Reviewer</h5>
     <ul class="publication">
-        <li>Transactions on Intelligent Transportation Systems</li>
-        <li>Transportation Research Board (TRB) Annual Meeting</li>
+        <li>IEEE Transactions on Intelligent Transportation Systems</li>
+        <li>Transportation Research Part A</li>
         <li>Journal of Advanced Transportation</li>
-        <li>IET Intelligent Transport Systems</li>
         <li>Transportation Letters</li>
+        <li>IET Intelligent Transport Systems</li>
         <li>Physica A: Statistical Mechanics and Its Applications</li>
         <li>International Journal of Information Management Data Insights</li>
+        <li>Transportation Research Board (TRB) Annual Meeting</li>
     </ul>
 </div>
-
-<!-- Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#zh"){
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 1;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
-            $select.selectedIndex = 0;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
